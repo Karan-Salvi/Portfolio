@@ -13,7 +13,7 @@ export const HoverEffect = ({
     title?: string;
     description?: string;
     link?: string;
-    image?: string;
+    image: string;
     skills?: string[];
   }[];
   className?: string;
@@ -51,7 +51,7 @@ export const HoverEffect = ({
             <Image
               width={32}
               height={32}
-              src={item?.image}
+              src={item.image}
               className="h-6 w-auto"
               alt=""
             />

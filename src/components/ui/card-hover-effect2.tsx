@@ -12,7 +12,7 @@ export const HoverEffect = ({
     title?: string;
     description?: string;
     link?: string;
-    image?: string;
+    
     skills?: string[];
     
   }[];
