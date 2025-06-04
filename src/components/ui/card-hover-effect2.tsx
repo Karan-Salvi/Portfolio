@@ -14,11 +14,11 @@ export const HoverEffect = ({
     link?: string;
     image?: string;
     skills?: string[];
-    next?: any;
+    
   }[];
   className?: string;
 }) => {
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <div className={cn("grid grid-cols-1  py-10", className)}>

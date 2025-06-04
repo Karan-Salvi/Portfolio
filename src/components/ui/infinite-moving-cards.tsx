@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
+import { ReactNode } from "react";
 
 export const InfiniteMovingCards = ({
   items,
@@ -11,7 +12,7 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
-    image?: any;
+    image?: ReactNode;
     quote?: string;
     name?: string;
     title?: string;
