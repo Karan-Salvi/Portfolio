@@ -1,6 +1,7 @@
 import React from "react";
 import { BackgroundLines } from "@/components/ui/background-lines";
 import { FlipWords } from "@/components/ui/flip-words";
+import Image from "next/image";
 
 const Hero = () => {
   const words = [
@@ -11,7 +12,9 @@ const Hero = () => {
   ];
   return (
     <BackgroundLines className="max-w-screen min-h-screen flex items-center justify-center w-full flex-col px-4 gap-10 max-h-screen">
-      <img
+      <Image
+        width={128}
+        height={128}
         src="/images/avatar.jpg"
         className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto z-20"
         alt=""
