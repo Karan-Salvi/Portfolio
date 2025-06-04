@@ -1,4 +1,5 @@
 import Blog from "@/components/Blog";
+import Footer from "@/components/Footer";
 
 import Hero from "@/components/Hero";
 import NavbarMain from "@/components/Navbar";
@@ -17,6 +18,7 @@ export default function Home() {
         <Skills />
         <Blog />
         <TimelineSection />
+        <Footer />
       </main>
     </>
   );
