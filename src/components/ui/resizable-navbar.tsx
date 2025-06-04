@@ -8,6 +8,7 @@ import {
   useMotionValueEvent,
 } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 
 import React, { useRef, useState } from "react";
 
@@ -231,7 +232,7 @@ export const MobileNavToggle = ({
 
 export const NavbarLogo = () => {
   return (
-    <a
+    <Link
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
@@ -245,7 +246,7 @@ export const NavbarLogo = () => {
       <span className="font-bold text-base text-black dark:text-white">
         Karan Salvi
       </span>
-    </a>
+    </Link>
   );
 };
 
