@@ -15,9 +15,8 @@ export default function Home() {
         <Hero />
         <Projects />
         <Skills />
-        <TimelineSection />
-        
         <Blog />
+        <TimelineSection />
       </main>
     </>
   );

@@ -25,7 +25,7 @@ export const HoverEffect = ({
       {items.map((item, idx) => (
         <a
           href={item?.link}
-          key={item?.link}
+          key={idx}
           className="relative group  block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -48,18 +48,14 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card className="text-start">
-            <img src={item?.image} className="h-6 w-auto" alt="" />
-            <CardTitle>{item?.title}</CardTitle>
-            <CardDescription>{item?.description}</CardDescription>
-            <div className=" mt-4 grid grid-cols-4 gap-2">
-              {item?.skills?.map((skill, index) => (
-                <div
-                  key={index}
-                  className="border-2 border-gray-800 w-auto px-2 py-0.5 rounded-md text-xs font-medium text-zinc-400 dark:text-zinc-300"
-                >
-                  {skill}
-                </div>
-              ))}
+            <div className="flex justify-between items-center">
+              <div className="w-full max-w-xl">
+                <CardTitle>{item?.title}</CardTitle>
+                <CardDescription>{item?.description}</CardDescription>
+              </div>
+              <p>
+                <span>12334</span> views
+              </p>
             </div>
           </Card>
         </a>

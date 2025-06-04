@@ -17,7 +17,7 @@ import { IoLogoCss3 } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 function Skills() {
   return (
-    <div className="h-[15rem] rounded-md flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+    <div className="h-[15rem] mt-24 rounded-md flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
       <h1 className="text-xl sm:text-2xl md:text-4xl font-bold py-5">Skills</h1>
       <InfiniteMovingCards
         items={testimonials}
