@@ -14,13 +14,15 @@ const Footer = () => {
           <Link href={"/links"}>Links</Link>
         </div>
         <div className="space-y-2 grid grid-cols-1">
-          <a href="https://github.com/Karan-Salvi">GitHub</a>{" "}
-          <a href="https://www.linkedin.com/in/karan-salvi-142813267/">
+          <Link href="https://github.com/Karan-Salvi">GitHub</Link>
+          <Link href="https://www.linkedin.com/in/karan-salvi-142813267/">
             LinkedIn
-          </a>
-          <a href="https://x.com/KaranSalvi38858">Twitter</a>{" "}
-          <a href="https://www.instagram.com/karan_salvi_786/">Instagram</a>
-          <a href="/">Freelancing</a>
+          </Link>
+          <Link href="https://x.com/KaranSalvi38858">Twitter</Link>
+          <Link href="https://www.instagram.com/karan_salvi_786/">
+            Instagram
+          </Link>
+          <Link href="/">Freelancing</Link>
         </div>
         <div className="space-y-2">
           <p>Snippets</p>
