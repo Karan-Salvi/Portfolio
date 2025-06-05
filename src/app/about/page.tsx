@@ -45,8 +45,104 @@ const page = () => {
         <br />
         Let&apos;s build something amazing together !!!!
       </p>
-
       <AboutHistory />
+
+      <section className="max-w-3xl mx-auto">
+        <h1 className="text-3xl font-bold">Experience</h1>
+        <div className="flex justify-between items-start mt-10 w-full">
+          <div className="flex flex-col gap-1">
+            <h3 className="text-base text-zinc-300 font-bold">
+              TastEzy MarketPlace LLP
+            </h3>
+            <p className="text-zinc-400 text-sm">Full Stack Developer</p>
+          </div>
+
+          <p className="text-zinc-500 text-sm">Jan 2025 - March 2025</p>
+        </div>
+
+        <ul className="list-disc pl-6 text-zinc-300 text-sm mt-2 flex flex-col gap-2">
+          <li>
+            Implemented a responsive and user-friendly web application
+            leveraging React.js and Tailwind CSS, resulting in a 20% increase in
+            user engagement.
+          </li>
+          <li>
+            Collaborated with a dynamic team of 10 to design and implement a
+            robust RESTful API using Node.js and Express, ensuring seamless data
+            flow and backend efficiency.
+          </li>
+          <li>
+            Integrated JWT-based authentication to enhance security and
+            streamline user session management across the platform.
+          </li>
+          <li>
+            Actively participated in code reviews, driving improvements in code
+            quality, maintainability, and development efficiency.
+          </li>
+          <li>
+            Built a scalable full-stack application using Next.js, meeting
+            complex requirements with optimized performance.
+          </li>
+        </ul>
+      </section>
+
+      <section className="max-w-3xl mx-auto mt-16">
+        <h1 className="text-3xl font-bold">Education</h1>
+        <div className="flex flex-col gap-2">
+          <div className="flex justify-between items-start mt-6 w-full">
+            <h3 className="text-base text-zinc-300 font-bold">
+              Modern Education Society&apos;s Wadia College of Engineering, Pune
+            </h3>
+
+            <p className="text-zinc-500 text-sm">2022 - 2026</p>
+          </div>
+          <div className="flex justify-between items-start">
+            <p className="text-zinc-400 text-[12.5px] font-medium ">
+              Bachelor of Engineering (B.E) in Computer Engineering (currently
+              in Final Year)
+            </p>
+            <p className="text-zinc-300 text-sm font-semibold">CGPA: 8.64/10</p>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <div className="flex justify-between items-start mt-6 w-full">
+            <h3 className="text-base text-zinc-300 font-bold">
+              Shri Dev Gopal Krishna Junior College, Guhagar
+            </h3>
+
+            <p className="text-zinc-500 text-sm">2022 - 2026</p>
+          </div>
+          <div className="flex justify-between items-start">
+            <p className="text-zinc-400 text-[12.5px] font-medium ">
+              HSC in Science (Maharashtra State Board of Secondary and Higher
+              Secondary Education)
+            </p>
+            <p className="text-zinc-300 text-sm font-semibold">
+              Percentage: 79.83%
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <div className="flex justify-between items-start mt-6 w-full">
+            <h3 className="text-base text-zinc-300 font-bold">
+              Madhymik Vidyalaya, Adur
+            </h3>
+
+            <p className="text-zinc-500 text-sm">2022 - 2026</p>
+          </div>
+          <div className="flex justify-between items-start">
+            <p className="text-zinc-400 text-[12.5px] font-medium ">
+              SSC (Maharashtra State Board of Secondary and Higher Secondary
+              Education)
+            </p>
+            <p className="text-zinc-300 text-sm font-semibold">
+              Percentage: 92.00%
+            </p>
+          </div>
+        </div>
+      </section>
     </section>
   );
 };
