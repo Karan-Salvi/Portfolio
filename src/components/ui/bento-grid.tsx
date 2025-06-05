@@ -1,8 +1,10 @@
+"use client";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { VscPreview } from "react-icons/vsc";
 import { FaGithub } from "react-icons/fa6";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export const BentoGrid = ({
   className,
@@ -40,12 +42,20 @@ export const BentoGridItem = ({
   live?: string;
   github?: string;
 }) => {
+  const router = useRouter();
   return (
     <div
       className={cn(
-        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none",
+        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none cursor-pointer",
         className
       )}
+      onClick={() => {
+        if (live) {
+          router.push(live);
+        } else if (github) {
+          router.push(github);
+        }
+      }}
     >
       <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100 overflow-hidden">
         <Image
@@ -72,10 +82,6 @@ export const BentoGridItem = ({
                 <FaGithub />
               </Link>
             )}
-
-            {/* <Link href={"/projects"}>
-              <FaGithub />
-            </Link> */}
           </div>
         </div>
 
