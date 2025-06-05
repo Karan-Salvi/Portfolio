@@ -1,11 +1,13 @@
-import React from 'react'
+import Projects from "@/components/ProjectPage/Projects";
+import React from "react";
 
 const page = () => {
   return (
-    <section className='flex flex-col items-center justify-center min-h-screen'>
-      <h1 className='text-4xl font-bold'>Coming Soon...</h1>
+    <section className="w-full min-h-screen mt-20 ">
+      <h1 className="text-4xl font-bold mb-8 p-2">Projects</h1>
+      <Projects />
     </section>
-  )
-}
+  );
+};
 
-export default page
+export default page;
