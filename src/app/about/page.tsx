@@ -6,9 +6,10 @@ const page = () => {
     <section className="w-full min-h-screen mt-18 md:mt-24 p-2">
       <h1 className="text-3xl font-bold">About Me</h1>
       <p className="text-zinc-400 text-sm mt-6 max-w-md">
-        Hi, I'm <span className="font-semibold text-zinc-200">Karan Salvi</span>
-        , a passionate and dedicated Computer Engineering student in my Final
-        year, with a strong foundation in{" "}
+        Hi, I&apos;m{" "}
+        <span className="font-semibold text-zinc-200">Karan Salvi</span>, a
+        passionate and dedicated Computer Engineering student in my Final year,
+        with a strong foundation in{" "}
         <span className="font-semibold text-zinc-200">
           Frontend Development
         </span>{" "}
@@ -33,8 +34,8 @@ const page = () => {
         disease detection and financial fraud analysis.
         <br />
         <br /> */}
-        I'm continuously learning new technologies and building real-world
-        applications — whether it's experimenting with{" "}
+        I&apos;m continuously learning new technologies and building real-world
+        applications — whether it&apos;s experimenting with{" "}
         <span className="font-semibold text-zinc-200">Next.js</span>,
         fine-tuning{" "}
         <span className="font-semibold text-zinc-200">open-source LLMs</span>.
@@ -42,7 +43,7 @@ const page = () => {
         products that create meaningful impact.
         <br />
         <br />
-        Let’s build something amazing together !!!!
+        Let&apos;s build something amazing together !!!!
       </p>
 
       <AboutHistory />
