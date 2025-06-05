@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased scrollbar-hidden`}
       >
-        <main className="max-w-4xl mx-auto p-2">
+        <main className="max-w-4xl mx-auto">
           <NavbarMain />
           {children}
           <Footer />

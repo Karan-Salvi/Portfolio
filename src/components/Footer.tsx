@@ -4,8 +4,9 @@ import { FaXTwitter } from "react-icons/fa6";
 import { SiProducthunt } from "react-icons/si";
 const Footer = () => {
   return (
-    <footer className=" text-gray-500 px-6 py-12">
-      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-sm">
+    <footer className=" w-full max-w-screen md:max-w-4xl text-gray-500 px-6 py-12 flex flex-col items-center">
+      <div className="m-10 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-500" />
+      <div className="max-w-4xl w-full mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-sm">
         <div className="space-y-2 grid grid-cols-1">
           <Link href={"/"}>Home</Link>
           <Link href={"/about"}>About</Link>

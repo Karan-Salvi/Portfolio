@@ -11,10 +11,10 @@ function Contact() {
     console.log("Form submitted");
   };
   return (
-    <div className="shadow-input mx-auto w-full max-w-2xl rounded-none  p-4 md:rounded-2xl md:p-8 ">
+    <div className="shadow-input mx-auto w-full max-w-2xl rounded-none  px-4 md:rounded-2xl md:pt-8 ">
       <h1 className="text-xl sm:text-2xl md:text-4xl font-bold text-center">Contact Me</h1>
 
-      <form className="my-8" onSubmit={handleSubmit}>
+      <form className="mt-8 " onSubmit={handleSubmit}>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="firstname">Full name</Label>
           <Input id="firstname" placeholder="Karan Salvi" type="text" />
@@ -36,7 +36,6 @@ function Contact() {
           <BottomGradient />
         </button>
 
-        <div className="mt-10 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
       </form>
     </div>
   );
