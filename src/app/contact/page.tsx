@@ -1,12 +1,5 @@
 "use client";
 import React from "react";
-
-import { cn } from "@/lib/utils";
-import { CiMail } from "react-icons/ci";
-import { CiPhone } from "react-icons/ci";
-import { CiLocationOn } from "react-icons/ci";
-import { FaLinkedinIn } from "react-icons/fa6";
-import { IoLogoGithub } from "react-icons/io5";
 import Contact from "@/components/Contact";
 
 // const Detail = [

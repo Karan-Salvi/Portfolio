@@ -4,14 +4,6 @@ import { BackgroundLines } from "@/components/ui/background-lines";
 import { FlipWords } from "@/components/ui/flip-words";
 import Image from "next/image";
 
-import { env } from "process";
-import { useRouter } from "next/navigation";
-import { CiMail } from "react-icons/ci";
-import { CiPhone } from "react-icons/ci";
-import { CiLocationOn } from "react-icons/ci";
-import { FaLinkedinIn } from "react-icons/fa6";
-import { IoLogoGithub } from "react-icons/io5";
-
 const Hero = () => {
   const words = [
     "Software Engineer",
