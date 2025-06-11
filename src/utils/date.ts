@@ -19,6 +19,6 @@ export const stringToDate = (dateStringInput: string): string => {
     monthNames[date.getMonth()]
   } ${date.getDate()}, ${date.getFullYear()}`;
 
-  console.log(formattedDate); // Output: June 6, 2025
+ // Output: June 6, 2025
   return formattedDate;
 };

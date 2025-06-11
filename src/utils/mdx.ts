@@ -40,7 +40,7 @@ export async function getBlogs() {
     })
   );
 
-  console.log("I am hear", allblogs);
+  
 
   return allblogs;
 }

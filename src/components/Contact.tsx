@@ -47,70 +47,13 @@ function Contact() {
   const [loader, setLoader] = useState(false);
   const [messageSuccess, setMessageSuccess] = useState(false);
 
-  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-  //   console.log("Form submitted");
-  //   console.log("Name:", name);
-  //   console.log("Email:", email);
-  //   console.log("Message:", message);
-
-  //   const form: {
-  //     name: string;
-  //     email: string;
-  //     message: string;
-  //   } = {
-  //     name: name,
-  //     email: email,
-  //     message: message,
-  //   };
-
-  //   emailjs
-  //     .sendForm("service_z28rsn8", "template_7xydsa7", form, {
-  //       publicKey: "20rEzkTzn03iD066b",
-  //     })
-  //     .then(
-  //       (response) => {
-  //         console.log("SUCCESS!", response.status, response.text);
-  //       },
-  //       (err) => {
-  //         console.log("FAILED...", err);
-  //       }
-  //     );
-  // };
-
-  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-  //   console.log("Form submitted");
-  //   console.log("Name:", name);
-  //   console.log("Email:", email);
-  //   console.log("Message:", message);
-
-  //   const templateParams = {
-  //     name: name,
-  //     email: email,
-  //     message: message,
-  //   };
-
-  //   emailjs
-  //     .send("service_z28rsn8", "template_7xydsa7", templateParams, {
-  //       publicKey: "20rEzkTzn03iD066b",
-  //     })
-  //     .then(
-  //       (response) => {
-  //         console.log("SUCCESS!", response.status, response.text);
-  //       },
-  //       (err) => {
-  //         console.log("FAILED...", err);
-  //       }
-  //     );
-  // };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted");
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Message:", message);
+    if (!name || !email || !message) {
+      alert("Please fill all the fields");
+      return;
+    }
 
     setLoader(true);
 
