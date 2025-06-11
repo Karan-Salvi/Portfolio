@@ -1,5 +1,6 @@
-import { getBlogs } from "@/app/blogs/[slug]/page";
+
 import { HoverEffect } from "@/components/ui/card-hover-effect2";
+import { getBlogs } from "@/utils/mdx";
 import Link from "next/link";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 

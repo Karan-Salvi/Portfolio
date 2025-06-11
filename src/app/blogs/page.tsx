@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import React from "react";
-import { getBlogs } from "./[slug]/page";
 import Card from "@/components/BlogPage/Card";
+import { getBlogs } from "@/utils/mdx";
 
 export const metadata: Metadata = {
   title: "Karan Salvi's Blogs",
