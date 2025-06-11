@@ -60,7 +60,7 @@ export const getFrontMatterBySlug = async (slug: string) => {
   //   options: { parseFrontmatter: true },
   // });
 
-  const { frontmatter, content } = await compileMDX<{ title: string }>({
+  const { frontmatter } = await compileMDX<{ title: string }>({
     source: SingleBlog,
     options: { parseFrontmatter: true },
   });
