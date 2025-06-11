@@ -18,8 +18,8 @@ function NavbarMain() {
   const navItems = [
     { name: "About", link: "/about" },
     { name: "Projects", link: "/projects" },
+    { name: "Skills", link: "/skills" },
     { name: "Blogs", link: "/blogs" },
-    { name: "Snippets", link: "/snippets" },
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -32,6 +32,16 @@ function NavbarMain() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
+            <NavbarButton
+              variant="secondary"
+              onClick={() => {
+                router.push(
+                  "https://drive.google.com/file/d/13UttTM0jK1Q83-1RX157ICZEDqzNrCfK/view?usp=drivesdk"
+                );
+              }}
+            >
+              Resume
+            </NavbarButton>
             <NavbarButton
               variant="primary"
               onClick={() => router.push("/contact")}
@@ -67,7 +77,20 @@ function NavbarMain() {
             ))}
             <div className="flex w-full flex-col gap-4">
               <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => {
+                  router.push(
+                    "https://drive.google.com/file/d/13UttTM0jK1Q83-1RX157ICZEDqzNrCfK/view?usp=drivesdk"
+                  );
+                }}
+                variant="primary"
+                className="w-full"
+              >
+                Resume
+              </NavbarButton>
+              <NavbarButton
+                onClick={() => {
+                  router.push("/contact");
+                }}
                 variant="primary"
                 className="w-full"
               >

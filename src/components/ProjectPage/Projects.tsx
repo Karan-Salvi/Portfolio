@@ -1,8 +1,9 @@
 import React from "react";
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 
-
-function Projects({items }:{
+function Projects({
+  items,
+}: {
   items: {
     title: string;
     description: string;
@@ -10,6 +11,7 @@ function Projects({items }:{
     icon: React.ReactNode;
     live?: string;
     github?: string;
+    tech: string[];
   }[];
 }) {
   return (
@@ -24,6 +26,7 @@ function Projects({items }:{
           className={""}
           live={item.live}
           github={item.github}
+          tech={item.tech}
         />
       ))}
     </BentoGrid>

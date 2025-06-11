@@ -20,7 +20,15 @@ const page = () => {
   );
 };
 
-const items = [
+const items: {
+  title: string;
+  description: string;
+  header: string;
+  icon: React.ReactNode;
+  live?: string;
+  github: string;
+  tech: string[];
+}[] = [
   {
     title: "TrendyCart",
     description: "Multi-vendor e-commerce platform with advanced features.",
@@ -28,6 +36,7 @@ const items = [
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
     live: "https://trendycart-ten.vercel.app/",
     github: "https://github.com/Karan-Salvi/Eccomerce-Web-Application",
+    tech: ["React.js", "Node.js", "MongoDB", "Express", "Redux", "RazorPay"],
   },
   {
     title: "CourseCraft",
@@ -36,6 +45,7 @@ const items = [
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
     live: "https://coursecraft-ten.vercel.app/",
     github: "https://github.com/Karan-Salvi/CourseCraft",
+    tech: ["React.js", "Node.js", "MongoDB", "Express", "Redux", "Stripe"],
   },
   {
     title: "WorkWave",
@@ -44,6 +54,15 @@ const items = [
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
     live: "https://workwave-ten.vercel.app/",
     github: "https://github.com/Karan-Salvi/WorkWave",
+    tech: [
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "RTK Query",
+      "Redux",
+      "RazorPay",
+    ],
   },
   {
     title: "FoodSwift",
@@ -52,6 +71,7 @@ const items = [
     icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
     live: "https://full-stack-task-management-app-liart-ten.vercel.app/",
     github: "https://github.com/Karan-Salvi/FoodSwift",
+    tech: ["React.js", "Node.js", "MongoDB", "Express"],
   },
   {
     title: "MentorFlux",
@@ -59,6 +79,15 @@ const items = [
     header: "/images/mentorfluxHome.png",
     icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
     github: "https://github.com/Karan-Salvi/MentorFlux",
+    tech: [
+      "WebRTC",
+      "Web Sockets",
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Redux",
+    ],
   },
   {
     title: "FarmCraft",
@@ -66,6 +95,15 @@ const items = [
     header: "/images/farmHome.png",
     icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
     github: "https://github.com/Karan-Salvi/Wadians-FarmCraft",
+    tech: ["Fast API", "LangChain", "Python", "AI agent", "Ollama", "React.js"],
+  },
+  {
+    title: "Yatra Cabs",
+    description: "Frontend for a cab booking service.",
+    header: "/images/yatraHome.png",
+    icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
+    github: "https://github.com/Karan-Salvi/YatraaCabs",
+    tech: ["Next.js", "CSS"],
   },
   {
     title: "Notepal",
@@ -74,6 +112,7 @@ const items = [
     header: "/images/notepalHome.png",
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
     github: "https://github.com/Karan-Salvi/Notepal-App",
+    tech: ["React.js", "Node.js", "MongoDB", "Express"],
   },
   {
     title: "StudySync",
@@ -81,13 +120,7 @@ const items = [
     header: "/images/studysyncHome.png",
     icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
     github: "https://github.com/Karan-Salvi/Web-Study",
-  },
-  {
-    title: "Yatra Cabs",
-    description: "Frontend for a cab booking service.",
-    header: "/images/yatraHome.png",
-    icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
-    github: "https://github.com/Karan-Salvi/YatraaCabs",
+    tech: ["HTML5", "CSS3", "JavaScript"],
   },
 ];
 

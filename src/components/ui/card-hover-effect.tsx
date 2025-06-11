@@ -57,7 +57,7 @@ export const HoverEffect = ({
             />
             <CardTitle>{item?.title}</CardTitle>
             <CardDescription>{item?.description}</CardDescription>
-            <div className=" mt-4 grid grid-cols-4 gap-2">
+            <div className=" mt-4 flex flex-wrap w-full gap-2">
               {item?.skills?.map((skill, index) => (
                 <div
                   key={index}

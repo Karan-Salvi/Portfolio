@@ -6,6 +6,17 @@ import { FaGithub } from "react-icons/fa6";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
+interface BentoGridItemType {
+  className?: string;
+  title?: string | React.ReactNode;
+  description?: string | React.ReactNode;
+  header?: string | React.ReactNode;
+  icon?: React.ReactNode;
+  live?: string;
+  github?: string;
+  tech: string[];
+}
+
 export const BentoGrid = ({
   className,
   children,
@@ -16,7 +27,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "mx-auto grid max-w-7xl grid-cols-1 gap-6 md:auto-rows-[18rem] md:grid-cols-3",
+        "mx-auto grid max-w-7xl grid-cols-1 gap-x-6 gap-y-14 md:auto-rows-[18rem] md:grid-cols-3",
         className
       )}
     >
@@ -33,20 +44,16 @@ export const BentoGridItem = ({
   icon,
   live,
   github,
-}: {
-  className?: string;
-  title?: string | React.ReactNode;
-  description?: string | React.ReactNode;
-  header?: string | React.ReactNode;
-  icon?: React.ReactNode;
-  live?: string;
-  github?: string;
-}) => {
+  tech,
+}: BentoGridItemType) => {
   const router = useRouter();
+
+  
+
   return (
     <div
       className={cn(
-        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none cursor-pointer",
+        "group/bento h-auto min-h-[20rem] shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none cursor-pointer",
         className
       )}
       onClick={() => {
@@ -57,7 +64,7 @@ export const BentoGridItem = ({
         }
       }}
     >
-      <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100 overflow-hidden">
+      <div className="flex flex-1 w-full h-full min-h-[8rem] max-h-8 rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100 overflow-hidden">
         <Image
           src={header as string}
           width={128}
@@ -90,6 +97,16 @@ export const BentoGridItem = ({
         </div>
         <div className="font-sans text-xs font-normal text-neutral-600 dark:text-neutral-300">
           {description}
+        </div>
+        <div className="flex flex-wrap gap-x-2 gap-y-2 mt-2">
+          {tech.map((a, idx) => (
+            <p
+              key={idx}
+              className="text-[9px] font-bold text-neutral-600 dark:text-neutral-400 border-[1px] px-2  rounded-2xl"
+            >
+              {a}
+            </p>
+          ))}
         </div>
       </div>
     </div>

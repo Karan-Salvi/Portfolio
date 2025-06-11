@@ -19,16 +19,12 @@ function Skills() {
   return (
     <div className="h-[15rem] mt-24 rounded-md flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
       <h1 className="text-xl sm:text-2xl md:text-4xl font-bold py-5">Skills</h1>
-      <InfiniteMovingCards
-        items={testimonials}
-        direction="right"
-        speed="slow"
-      />
+      <InfiniteMovingCards items={skills} direction="right" speed="slow" />
     </div>
   );
 }
 
-const testimonials = [
+const skills = [
   {
     image: <BiLogoReact className="w-7 h-7" />,
     title: "React.js",

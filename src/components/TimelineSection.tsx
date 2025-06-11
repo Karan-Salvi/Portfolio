@@ -20,7 +20,7 @@ function TimelineSection() {
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="/images/timeline1.png"
+              src="/images/time_1_line.png"
               alt="startup template"
               width={500}
               height={500}

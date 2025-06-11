@@ -3,6 +3,7 @@ import React from "react";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import Link from "next/link";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import ContactComp from "./ContactComp";
 
 export const projects = [
   {
@@ -83,6 +84,8 @@ const Projects = () => {
         </Link>
         <IoArrowForwardCircleOutline className="text-2xl font-bold" />
       </div>
+
+      
     </div>
   );
 };
