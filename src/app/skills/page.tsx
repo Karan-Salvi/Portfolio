@@ -1,27 +1,17 @@
 import React from "react";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
-
-
-import { LiaReact } from "react-icons/lia";
 import { SiMongodb } from "react-icons/si";
 import { IoLogoNodejs } from "react-icons/io5";
-
-import { SiTailwindcss } from "react-icons/si";
 import { FaBootstrap } from "react-icons/fa";
 import { DiPython } from "react-icons/di";
 import { RiJavascriptFill } from "react-icons/ri";
-import { VscVscode } from "react-icons/vsc";
-
-import { FaGitAlt } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
 
 // importing the icons from react icons
 import { BiLogoReact } from "react-icons/bi";
 import { TbBrandNextjs } from "react-icons/tb";
-import { FaNode } from "react-icons/fa";
 import { MdOutlineWeb } from "react-icons/md";
 import { SiExpress } from "react-icons/si";
-import { AiFillDatabase } from "react-icons/ai";
 import { SiHiveBlockchain } from "react-icons/si";
 import { FaDocker } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";

@@ -1,20 +1,8 @@
 "use client";
 import React from "react";
-import { BackgroundLines } from "@/components/ui/background-lines";
-import { FlipWords } from "@/components/ui/flip-words";
-import Image from "next/image";
-import Link from "next/link";
-import { env } from "process";
-import { useRouter } from "next/navigation";
 import { IoNewspaperOutline } from "react-icons/io5";
-
-import { CiMail } from "react-icons/ci";
-import { CiPhone } from "react-icons/ci";
-import { CiLocationOn } from "react-icons/ci";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io5";
-import emailjs from "@emailjs/browser";
-import { BiLoaderAlt } from "react-icons/bi";
 import { FaXTwitter } from "react-icons/fa6";
 
 const ContactComp = () => {

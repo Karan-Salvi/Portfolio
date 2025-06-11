@@ -8,14 +8,12 @@ const Card = ({
   date,
   description,
   image,
-  title,
   slug,
 }: {
   author: string;
   date: string;
   description?: string;
   image: string;
-  title: string;
   slug?: string;
 }) => {
   return (

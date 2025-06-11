@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import React from "react";
-import { MDXRemote } from "next-mdx-remote/rsc";
+
 import { promises as fs } from "fs";
 import path from "path";
 import { compileMDX } from "next-mdx-remote/rsc";
@@ -21,7 +21,7 @@ export default async function SingleBlogPage(params: {
   params: { slug: string };
 }) {
   const { slug } = params.params;
-  const blog  = await getSingleBlog(slug);
+  const blog = await getSingleBlog(slug);
 
   if (!blog) {
     redirect("/blogs");
@@ -39,7 +39,10 @@ export default async function SingleBlogPage(params: {
             <h1 className="text-3xl font-extrabold mb-0">
               {frontmatter.title}
             </h1>
-            <Link href={"/blogs"} className="border-2 p-1 rounded-full hover:scale-115 transition-all duration-200">
+            <Link
+              href={"/blogs"}
+              className="border-2 p-1 rounded-full hover:scale-115 transition-all duration-200"
+            >
               <FaArrowLeft className="text-xl" />
             </Link>
           </div>
@@ -103,7 +106,12 @@ const getFrontMatterBySlug = async (slug: string) => {
     return null;
   }
 
-  const { content, frontmatter } = await compileMDX<{ title: string }>({
+  // const { content, frontmatter } = await compileMDX<{ title: string }>({
+  //   source: SingleBlog,
+  //   options: { parseFrontmatter: true },
+  // });
+
+  const { frontmatter } = await compileMDX<{ title: string }>({
     source: SingleBlog,
     options: { parseFrontmatter: true },
   });

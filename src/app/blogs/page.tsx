@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import React from "react";
 import { getBlogs } from "./[slug]/page";
 import Card from "@/components/BlogPage/Card";
-import { LuSearch } from "react-icons/lu";
 
 export const metadata: Metadata = {
   title: "Karan Salvi's Blogs",
@@ -38,7 +37,6 @@ const BlogsPage = async () => {
             date={blog.date ?? ""}
             description={blog.description ?? ""}
             image={blog.image ?? ""}
-            title={blog.title ?? ""}
             slug={blog.slug ?? ""}
           />
         ))}

@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
@@ -10,7 +10,6 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io5";
 import emailjs from "@emailjs/browser";
 import { BiLoaderAlt } from "react-icons/bi";
-import { env } from "process";
 
 const Detail = [
   {
