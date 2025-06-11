@@ -1,36 +1,227 @@
 ---
-title: "Getting Started React"
-description: "A developer-friendly utility-first CSS framework for building modern, responsive UIs rapidly."
+title: "Getting Started React JS  "
+description: "Everything you need to know about React.js — from components and hooks to best practices and integration."
 date: "2025-06-06"
 author: "Karan Salvi"
-image: "/images/foodswiftHome.png"
+image: "/images/react-cover.jpg"
 ---
 
-# Getting Started with React.js
+# Mastering React.js: A Developer's Guide
 
-**Tailwind CSS** is a utility-first CSS framework that enables developers to build modern, responsive designs directly in their HTML or JSX. Instead of writing custom CSS, Tailwind provides thousands of pre-defined utility classes that you can combine to create unique designs quickly.
-
----
-
-## 🚀 Why Use Tailwind CSS?
-
-- ✅ Rapid UI development with utility classes
-- 🎨 Minimal or no custom CSS needed
-- 🌙 Built-in dark mode support
-- 📱 Mobile-first and responsive by default
-- 🔌 Extensible with plugins (like typography, forms, etc.)
+React.js is a powerful JavaScript library developed by Facebook for building interactive user interfaces efficiently. It's widely used for single-page applications, mobile apps (via React Native), and modern web development workflows.
 
 ---
 
-## 🔧 Installation
+## 🚀 What is React?
 
-Here's how to install Tailwind CSS in a **Next.js** project:
+React is a declarative, component-based library that makes it easy to build complex UIs from small and isolated pieces of code called “components.”
 
-![My Image](/images/foodswiftHome.png)
+### Key Features of React:
+
+- 🧩 Component-Based Architecture
+- ⚛️ Virtual DOM for faster rendering
+- 🔁 Unidirectional Data Flow
+- 🪝 Built-in Hooks for state and lifecycle
+- 🔧 Seamless integration with other libraries
+
+---
+
+## 🔧 Setting Up React
+
+### Using Create React App
 
 ```bash
-npx create-next-app my-tailwind-app
-cd my-tailwind-app
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+npx create-react-app my-react-app
+cd my-react-app
+npm start
 ```
+
+### Using Vite (Faster alternative)
+
+```bash
+npm create vite@latest my-vite-react-app --template react
+cd my-vite-react-app
+npm install
+npm run dev
+```
+
+---
+
+## 🧱 React Fundamentals
+
+### JSX - JavaScript XML
+
+JSX allows writing HTML in JavaScript:
+
+```jsx
+const Greeting = () => <h1>Hello, World!</h1>;
+```
+
+### Components
+
+#### Functional Component:
+
+```jsx
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+
+#### Arrow Function Component:
+
+```jsx
+const Welcome = ({ name }) => <h1>Hello, {name}</h1>;
+```
+
+---
+
+## 🪝 React Hooks
+
+### useState
+
+```jsx
+import { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>{count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+```
+
+### useEffect
+
+```jsx
+import { useEffect, useState } from "react";
+
+function Timer() {
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSeconds((prev) => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return <p>Timer: {seconds} seconds</p>;
+}
+```
+
+---
+
+## ⚙️ Props and State
+
+### Props Example:
+
+```jsx
+function Profile({ name, age }) {
+  return (
+    <p>
+      {name} is {age} years old
+    </p>
+  );
+}
+```
+
+### State Example:
+
+```jsx
+const [theme, setTheme] = useState("light");
+```
+
+---
+
+## 🧭 Routing with React Router
+
+Install:
+
+```bash
+npm install react-router-dom
+```
+
+Setup:
+
+```jsx
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
+  );
+}
+```
+
+---
+
+## 💾 Fetching Data
+
+### Using fetch:
+
+```jsx
+useEffect(() => {
+  fetch("https://api.example.com/data")
+    .then((response) => response.json())
+    .then((data) => setData(data));
+}, []);
+```
+
+### Using Axios:
+
+```bash
+npm install axios
+```
+
+```jsx
+import axios from "axios";
+
+useEffect(() => {
+  axios
+    .get("https://api.example.com/data")
+    .then((response) => setData(response.data));
+}, []);
+```
+
+---
+
+## 🧪 Testing React Components
+
+### Using Jest and React Testing Library
+
+```bash
+npm install --save-dev @testing-library/react jest
+```
+
+```jsx
+import { render, screen } from "@testing-library/react";
+import App from "./App";
+
+test("renders welcome message", () => {
+  render(<App />);
+  expect(screen.getByText(/welcome/i)).toBeInTheDocument();
+});
+```
+
+---
+
+## 🧠 Best Practices
+
+- Break components into smaller reusable ones
+- Keep state as close to where it's needed as possible
+- Use PropTypes or TypeScript for type checking
+- Avoid unnecessary re-renders
+
+---
+
+

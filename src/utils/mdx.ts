@@ -12,7 +12,9 @@ export const getSingleBlog = async (slug: string) => {
       return null;
     }
 
-    const { content, frontmatter } = await compileMDX<{ title: string }>({
+    const { content, frontmatter } = await compileMDX<{
+      title: string;
+    }>({
       source: SingleBlog,
       options: { parseFrontmatter: true },
     });
@@ -40,8 +42,6 @@ export async function getBlogs() {
     })
   );
 
-  
-
   return allblogs;
 }
 
@@ -60,7 +60,7 @@ export const getFrontMatterBySlug = async (slug: string) => {
   //   options: { parseFrontmatter: true },
   // });
 
-  const { frontmatter } = await compileMDX<{ title: string }>({
+  const { frontmatter, content } = await compileMDX<{ title: string }>({
     source: SingleBlog,
     options: { parseFrontmatter: true },
   });

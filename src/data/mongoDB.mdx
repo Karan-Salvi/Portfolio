@@ -1,0 +1,222 @@
+---
+title: "Getting Started with MongoDB and Mongoose - A Comprehensive Guide"
+description: "A comprehensive guide to using MongoDB and Mongoose for efficient and scalable data handling in Node.js applications."
+date: "2025-06-06"
+author: "Karan Salvi"
+image: "/images/mongo-cover.jpg"
+---
+
+# Getting Started with MongoDB and Mongoose
+
+MongoDB is a popular NoSQL database that stores data in flexible, JSON-like documents. Mongoose is an elegant MongoDB object modeling tool for Node.js.
+
+---
+
+## 🍃 Why Use MongoDB?
+
+- 🧾 Schema-less and flexible
+- 🚀 High performance and scalability
+- 🔄 Easily handles large volumes of unstructured data
+- 🔐 Built-in replication and sharding support
+
+---
+
+## 🧰 Why Use Mongoose?
+
+Mongoose adds structure and convenience on top of MongoDB:
+
+- ✅ Schema definitions
+- 🔒 Data validation
+- 🔁 Middleware support (pre/post hooks)
+- 🧩 Simple API for querying and updating documents
+
+---
+
+## 🔧 Installing MongoDB and Mongoose
+
+```bash
+npm install mongoose
+```
+
+Make sure you have MongoDB installed and running locally or use MongoDB Atlas.
+
+---
+
+## 🌐 Connecting to MongoDB
+
+```js
+// db.js
+const mongoose = require("mongoose");
+
+mongoose.connect("mongodb://localhost:27017/myapp", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", () => {
+  console.log("Connected to MongoDB");
+});
+```
+
+---
+
+## 🧱 Defining a Schema and Model
+
+```js
+// models/User.js
+const mongoose = require("mongoose");
+
+const userSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  age: Number,
+  createdAt: { type: Date, default: Date.now },
+});
+
+const User = mongoose.model("User", userSchema);
+module.exports = User;
+```
+
+---
+
+## 📦 Creating and Saving Documents
+
+```js
+const User = require("./models/User");
+
+const newUser = new User({
+  name: "Alice",
+  email: "alice@example.com",
+  age: 25,
+});
+
+newUser
+  .save()
+  .then((user) => console.log("User saved:", user))
+  .catch((err) => console.error(err));
+```
+
+---
+
+## 🔍 Querying Documents
+
+```js
+User.find().then((users) => console.log(users));
+
+User.findOne({ email: "alice@example.com" }).then((user) => console.log(user));
+
+User.findById("someId").then((user) => console.log(user));
+```
+
+---
+
+## ✏️ Updating Documents
+
+```js
+User.updateOne({ email: "alice@example.com" }, { age: 30 }).then((result) =>
+  console.log(result)
+);
+
+User.findByIdAndUpdate("someId", { name: "Alice Updated" }, { new: true }).then(
+  (updated) => console.log(updated)
+);
+```
+
+---
+
+## ❌ Deleting Documents
+
+```js
+User.deleteOne({ email: "alice@example.com" }).then((result) =>
+  console.log(result)
+);
+
+User.findByIdAndDelete("someId").then((deleted) => console.log(deleted));
+```
+
+---
+
+## ⚙️ Schema Validation and Defaults
+
+Mongoose allows built-in validation:
+
+```js
+const productSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  price: { type: Number, min: 0 },
+  inStock: { type: Boolean, default: true },
+});
+```
+
+---
+
+## 🧠 Middleware (Hooks)
+
+Pre-save hook example:
+
+```js
+userSchema.pre("save", function (next) {
+  this.name = this.name.trim();
+  next();
+});
+```
+
+---
+
+## 🔗 Relationships (References)
+
+```js
+const blogPostSchema = new mongoose.Schema({
+  title: String,
+  body: String,
+  author: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+});
+
+const BlogPost = mongoose.model("BlogPost", blogPostSchema);
+
+BlogPost.find()
+  .populate("author")
+  .then((posts) => console.log(posts));
+```
+
+---
+
+## 🛡️ Indexes and Performance
+
+```js
+userSchema.index({ email: 1 });
+```
+
+---
+
+## 🧪 Testing with MongoDB Memory Server
+
+```bash
+npm install --save-dev mongodb-memory-server
+```
+
+Use in tests:
+
+```js
+const { MongoMemoryServer } = require("mongodb-memory-server");
+```
+
+---
+
+## 📁 Project Structure Example
+
+```
+src/
+│
+├── models/
+│   └── User.js
+├── db.js
+├── app.js
+└── routes/
+    └── userRoutes.js
+```
+
+---
+

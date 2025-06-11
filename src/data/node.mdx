@@ -1,0 +1,182 @@
+---
+title: "Getting Started with Express and Node.js - A Developer's Guide"
+description: "A developer-friendly guide to building robust server-side applications using Node.js and Express framework."
+date: "2025-06-06"
+author: "Karan Salvi"
+image: "/images/node-cover.jpg"
+---
+
+
+
+# Getting Started with Express and Node.js
+
+Node.js is a runtime environment that lets you run JavaScript on the server side. Express is a minimal and flexible Node.js web application framework that provides a robust set of features to develop web and mobile applications.
+
+---
+
+## ⚙️ Why Use Node.js?
+
+- 🚀 Non-blocking, event-driven architecture
+- 📦 Rich ecosystem with npm
+- 💡 Single language (JavaScript) for frontend and backend
+- 🔄 Real-time data handling
+
+---
+
+## 🧰 Why Use Express?
+
+- 🧱 Minimalist framework
+- 🔧 Middleware support
+- 🔄 Easy routing system
+- 📚 Great documentation and large community
+
+---
+
+## 🔧 Installation
+
+Create a new Node.js project:
+
+```bash
+mkdir my-express-app
+cd my-express-app
+npm init -y
+npm install express
+```
+
+---
+
+## 🚀 Creating Your First Express Server
+
+```js
+// app.js
+const express = require("express");
+const app = express();
+const PORT = 3000;
+
+app.get("/", (req, res) => {
+  res.send("Hello World from Express!");
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
+```
+
+Run it:
+
+```bash
+node app.js
+```
+
+---
+
+## 🛠️ Handling Routes
+
+```js
+app.get("/about", (req, res) => {
+  res.send("About Page");
+});
+
+app.post("/submit", (req, res) => {
+  res.send("Form submitted");
+});
+```
+
+---
+
+## 📦 Using Middleware
+
+Middleware are functions that have access to request and response objects.
+
+```js
+app.use(express.json());
+
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url}`);
+  next();
+});
+```
+
+---
+
+## 📂 Serving Static Files
+
+```js
+app.use(express.static("public"));
+```
+
+Put files in the `public/` folder to serve them directly.
+
+---
+
+## 🧩 Using Routers
+
+```js
+// routes/userRoutes.js
+const express = require("express");
+const router = express.Router();
+
+router.get("/", (req, res) => res.send("User Home"));
+router.get("/:id", (req, res) => res.send(`User ID: ${req.params.id}`));
+
+module.exports = router;
+
+// In app.js
+const userRoutes = require("./routes/userRoutes");
+app.use("/users", userRoutes);
+```
+
+---
+
+## 🧪 Error Handling
+
+```js
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send("Something broke!");
+});
+```
+
+---
+
+## 🔐 Environment Variables
+
+Install dotenv:
+
+```bash
+npm install dotenv
+```
+
+Use it:
+
+```js
+require("dotenv").config();
+const PORT = process.env.PORT || 3000;
+```
+
+---
+
+## 🌐 Connecting to MongoDB (Quick Example)
+
+```js
+const mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost:27017/myapp");
+```
+
+---
+
+## 📁 Suggested Project Structure
+
+```
+my-express-app/
+├── app.js
+├── routes/
+│   └── userRoutes.js
+├── controllers/
+├── models/
+├── middlewares/
+├── public/
+└── .env
+```
+
+---

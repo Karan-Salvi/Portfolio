@@ -19,12 +19,12 @@ const Card = ({
   return (
     <Link
       href={`blogs/${slug}`}
-      className="flex flex-col justify-between items-start w-full gap-3"
+      className="flex flex-col justify-between items-start w-full gap-3 hover:scale-105 transition-all duration-300 ease-in-out "
     >
       <Image
         width={120}
         height={120}
-        className="w-full aspect-video rounded-lg"
+        className="w-full aspect-video rounded-lg "
         src={image || "/images/avatar.jpg"}
         alt="Blog Cover Page"
       />
