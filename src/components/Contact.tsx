@@ -20,7 +20,7 @@ const Detail = [
   {
     icon: <CiPhone className="text-white text-2xl font-bold" />,
     title: "Phone",
-    info: "+91 7798989083",
+    info: "+91 77XXXXXXXX",
   },
   {
     icon: <CiLocationOn className="text-white text-2xl font-bold" />,
@@ -46,7 +46,6 @@ function Contact() {
 
   const [loader, setLoader] = useState(false);
   const [messageSuccess, setMessageSuccess] = useState(false);
-
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
