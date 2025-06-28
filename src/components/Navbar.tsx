@@ -36,7 +36,7 @@ function NavbarMain() {
               variant="secondary"
               onClick={() => {
                 router.push(
-                  "https://drive.google.com/file/d/13UttTM0jK1Q83-1RX157ICZEDqzNrCfK/view?usp=drivesdk"
+                  "https://drive.google.com/file/d/1gotvUNxJxrZxoLPiEiIjuWWxfpewezYT/view?usp=sharing"
                 );
               }}
             >
@@ -79,7 +79,7 @@ function NavbarMain() {
               <NavbarButton
                 onClick={() => {
                   router.push(
-                    "https://drive.google.com/file/d/13UttTM0jK1Q83-1RX157ICZEDqzNrCfK/view?usp=drivesdk"
+                    "https://drive.google.com/file/d/1gotvUNxJxrZxoLPiEiIjuWWxfpewezYT/view?usp=sharing"
                   );
                 }}
                 variant="primary"
