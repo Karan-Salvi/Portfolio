@@ -27,7 +27,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "mx-auto grid max-w-7xl grid-cols-1 gap-x-6 gap-y-14 md:auto-rows-[18rem] md:grid-cols-3",
+        "mx-auto grid max-w-7xl grid-cols-1 gap-x-6 gap-y-14 md:auto-rows-[18rem] sm:grid-cols-2 md:grid-cols-3",
         className
       )}
     >
@@ -48,28 +48,26 @@ export const BentoGridItem = ({
 }: BentoGridItemType) => {
   const router = useRouter();
 
-  
-
   return (
     <div
       className={cn(
-        "group/bento h-auto min-h-[20rem] shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none cursor-pointer",
+        "group/bento h-auto min-h-[20rem] shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none cursor-pointer ",
         className
       )}
-      onClick={() => {
-        if (live) {
-          router.push(live);
-        } else if (github) {
-          router.push(github);
-        }
-      }}
+      // onClick={() => {
+      //   if (live) {
+      //     router.push(live);
+      //   } else if (github) {
+      //     router.push(github);
+      //   }
+      // }}
     >
-      <div className="flex flex-1 w-full h-full min-h-[8rem] max-h-8 rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100 overflow-hidden">
+      <div className="flex flex-1 w-full h-full min-h-[8rem] max-h-8 rounded-xl bg-gradient-to-br from-pink-500  to-purple-700 overflow-hidden px-4 ">
         <Image
           src={header as string}
           width={128}
           height={128}
-          className="object-cover w-full h-full transition duration-200 group-hover/bento:scale-105"
+          className="object-cover w-full h-full transition duration-200 group-hover/bento:scale-105 rounded-t-sm mt-3"
           alt={"Project Image"}
         />
       </div>

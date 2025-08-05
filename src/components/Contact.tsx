@@ -10,12 +10,14 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io5";
 import emailjs from "@emailjs/browser";
 import { BiLoaderAlt } from "react-icons/bi";
+import Link from "next/link";
 
 const Detail = [
   {
     icon: <CiMail className="text-white text-2xl font-bold" />,
     title: "Email",
     info: "karansalviwork@gmail.com",
+    link: "mailto:karansalviwork@gmail.com",
   },
   {
     icon: <CiPhone className="text-white text-2xl font-bold" />,
@@ -31,11 +33,13 @@ const Detail = [
     icon: <FaLinkedinIn className="text-white text-2xl font-bold" />,
     title: "LinkedIn",
     info: "linkedin.com/in/karan-salvi-142813267",
+    link: "https://linkedin.com/in/karan-salvi-142813267",
   },
   {
     icon: <IoLogoGithub className="text-white text-2xl font-bold" />,
     title: "GitHub",
     info: "https://github.com/Karan-Salvi",
+    link: "https://github.com/Karan-Salvi",
   },
 ];
 
@@ -94,7 +98,8 @@ function Contact() {
             Get In Touch
           </h2>
           {Detail.map((item, idx) => (
-            <div
+            <Link
+              href={item?.link || ""}
               className="w-full flex justify-start items-center space-x-3"
               key={idx}
             >
@@ -105,7 +110,7 @@ function Contact() {
                 </h2>
                 <p className=" text-sm font-light text-zinc-300">{item.info}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         <div className="w-full">

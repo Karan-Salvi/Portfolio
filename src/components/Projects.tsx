@@ -4,31 +4,13 @@ import { HoverEffect } from "@/components/ui/card-hover-effect";
 import Link from "next/link";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 
-
 export const projects = [
   {
-    title: "FoodSwift",
-    description:
-      "A food delivery app that connects users with local restaurants and allows them to order food online.",
-    link: "https://full-stack-task-management-app-liart-ten.vercel.app/",
-    image: "/images/foodswift.png",
-    skills: [
-      "Frontend",
-      "Backend",
-      "Redux Toolkit",
-      "RTK Query",
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-    ],
-  },
-  {
-    title: "TrendyCart",
+    title: "CartLoop",
     description:
       "A multi-vendor e-commerce platform that allows users to create their own online stores and sell products.",
-    link: "https://trendycart-ten.vercel.app/",
-    image: "/images/trendycart.png",
+    link: "https://cartloop.vercel.app",
+    image: "/images/cartloop.png",
     skills: [
       "Frontend",
       "Analysis",
@@ -40,10 +22,10 @@ export const projects = [
     ],
   },
   {
-    title: "CourseCraft",
+    title: "SkillCrest",
     description:
       "An online learning platform that allows users to create and sell their own courses.",
-    link: "https://coursecraft-ten.vercel.app/",
+    link: "https://skillcrest.vercel.app",
     image: "/images/coursecraft.png",
     skills: [
       "Frontend",
@@ -57,15 +39,33 @@ export const projects = [
   },
 
   {
-    title: "WorkWave",
+    title: "UpNetic",
     description:
-      "A Job board platform that connects job seekers with employers across various industries.",
-    link: "https://github.com/Karan-Salvi/WorkWave",
-    image: "/images/workwave.png",
+      "Build your professional network with live chat, dynamic feeds, and seamless connections.",
+    link: "https://upnetic.vercel.app",
+    image: "/images/upnetic.png",
+    skills: [
+      "Websockets",
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Redux",
+      "RTK Query",
+    ],
+  },
+  {
+    title: "SerenoSphere",
+    description:
+      "Discover, create, and manage yoga, meditation, and mindfulness sessions all in one seamless platform.",
+    link: "https://serenosphere.vercel.app",
+    image: "/images/serenosphere.png",
     skills: [
       "Frontend",
       "Backend",
-      "React.js",
+      "Redux Toolkit",
+      "RTK Query",
+      "React",
       "Node.js",
       "Express",
       "MongoDB",
@@ -84,8 +84,6 @@ const Projects = () => {
         </Link>
         <IoArrowForwardCircleOutline className="text-2xl font-bold" />
       </div>
-
-      
     </div>
   );
 };

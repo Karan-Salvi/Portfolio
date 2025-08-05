@@ -13,7 +13,7 @@ import {
 
 const page = () => {
   return (
-    <section className="w-full min-h-screen mt-20 ">
+    <section className="w-full min-h-screen mt-20 px-16 sm:px-5 md:px-0">
       <h1 className="text-4xl font-bold mb-8 p-2">Projects</h1>
       <Projects items={items} />
     </section>
@@ -30,23 +30,81 @@ const items: {
   tech: string[];
 }[] = [
   {
-    title: "TrendyCart",
-    description: "Multi-vendor e-commerce platform with advanced features.",
-    header: "/images/trendycartHome.png",
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
-    live: "https://trendycart-ten.vercel.app/",
-    github: "https://github.com/Karan-Salvi/Eccomerce-Web-Application",
-    tech: ["React.js", "Node.js", "MongoDB", "Express", "Redux", "RazorPay"],
-  },
-  {
-    title: "CourseCraft",
+    title: "SkillCrest",
     description: "Comprehensive course management system for educators.",
-    header: "/images/coursecraftHome.png",
+    header: "/images/skillcrest.png",
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
-    live: "https://coursecraft-ten.vercel.app/",
+    live: "https://skillcrest.vercel.app",
     github: "https://github.com/Karan-Salvi/CourseCraft",
     tech: ["React.js", "Node.js", "MongoDB", "Express", "Redux", "Stripe"],
   },
+  {
+    title: "CartLoop",
+    description: "Multi-vendor e-commerce platform with advanced features.",
+    header: "/images/cartloopHome.png",
+    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    live: "https://cartloop.vercel.app",
+    github: "https://github.com/Karan-Salvi/Eccomerce-Web-Application",
+    tech: [
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Redux",
+      "Stripe",
+      "Redis",
+      "RTK Query",
+    ],
+  },
+  {
+    title: "UpNetic",
+    description:
+      "Build your professional network with live chat, dynamic feeds, and seamless connections.",
+    header: "/images/upneticHome.png",
+    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    live: "https://upnetic.vercel.app",
+    github: "https://github.com/Karan-Salvi/UpNetic",
+    tech: [
+      "Websockets",
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Redux",
+      "RTK Query",
+    ],
+  },
+  {
+    title: "SerenoSphere",
+    description:
+      "Discover, create, and manage yoga, meditation, and mindfulness sessions all in one seamless platform.",
+    header: "/images/serenosphereHome.png",
+    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    live: "https://serenosphere.vercel.app",
+    github: "https://github.com/Karan-Salvi/SerenoSphere",
+    tech: ["React.js", "Node.js", "MongoDB", "Express", "Redux", "RTK Query"],
+  },
+
+  {
+    title: "FlowLane",
+    description:
+      "Organize projects effortlessly with a sleek, drag-and-drop Kanban board built for speed and clarity.",
+    header: "/images/flowlaneHome.png",
+    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    live: "https://flowlane.vercel.app",
+    github: "https://github.com/Karan-Salvi/FlowLane---Kanban-Dashboard",
+    tech: ["React.js", "Tailwind CSS", "Zustand"],
+  },
+  {
+    title: "FoodSwift",
+    description: "A food delivery app with a focus on speed and convenience.",
+    header: "/images/fooswiftHome.png",
+    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    live: "https://foodswift-web.vercel.app",
+    github: "https://github.com/Karan-Salvi/FoodSwift",
+    tech: ["React.js", "Node.js", "MongoDB", "Express"],
+  },
+
   {
     title: "WorkWave",
     description: "Platform for freshers to connect and apply for companies.",
@@ -64,15 +122,7 @@ const items: {
       "RazorPay",
     ],
   },
-  {
-    title: "FoodSwift",
-    description: "A food delivery app with a focus on speed and convenience.",
-    header: "/images/foodswiftHome.png",
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
-    live: "https://full-stack-task-management-app-liart-ten.vercel.app/",
-    github: "https://github.com/Karan-Salvi/FoodSwift",
-    tech: ["React.js", "Node.js", "MongoDB", "Express"],
-  },
+
   {
     title: "MentorFlux",
     description: "A platform connecting students with mentors for guidance.",
@@ -116,7 +166,7 @@ const items: {
   },
   {
     title: "StudySync",
-    description: "Frontend for a collaborative study platform.",
+    description: "Frontend for a collaborative study platform for learners.",
     header: "/images/studysyncHome.png",
     icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
     github: "https://github.com/Karan-Salvi/Web-Study",

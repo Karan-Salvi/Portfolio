@@ -38,11 +38,12 @@ const Footer = () => {
         </div>
       </div>
       <div className="max-w-7xl mx-auto mt-10 text-sm text-gray-400 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div className="flex items-center gap-2">
+        <Link
+          href={"https://x.com/KaranSalvi38858"}
+          className="flex items-center gap-2"
+        >
           <span>Find me on</span> <FaXTwitter className="text-white" />
-          <span>and</span>
-          <SiProducthunt className="text-green-400 bg-white rounded p-0.5" />
-        </div>
+        </Link>
       </div>
     </footer>
   );
