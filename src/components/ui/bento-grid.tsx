@@ -4,7 +4,6 @@ import Image from "next/image";
 import { VscPreview } from "react-icons/vsc";
 import { FaGithub } from "react-icons/fa6";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 interface BentoGridItemType {
   className?: string;
@@ -46,8 +45,6 @@ export const BentoGridItem = ({
   github,
   tech,
 }: BentoGridItemType) => {
-  const router = useRouter();
-
   return (
     <div
       className={cn(

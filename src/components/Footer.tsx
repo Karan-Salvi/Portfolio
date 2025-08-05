@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { FaXTwitter } from "react-icons/fa6";
-import { SiProducthunt } from "react-icons/si";
+
 const Footer = () => {
   return (
     <footer className=" w-full max-w-screen md:max-w-4xl text-gray-500 px-6 py-12 flex flex-col items-center">
