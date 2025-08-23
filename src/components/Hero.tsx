@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { BackgroundLines } from "@/components/ui/background-lines";
-import { FlipWords } from "@/components/ui/flip-words";
 import Image from "next/image";
 import { ContainerTextFlip } from "./ui/container-text-flip";
 
