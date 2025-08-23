@@ -33,7 +33,7 @@ export function ContainerTextFlip({
   const updateWidthForWord = () => {
     if (textRef.current) {
       // Add some padding to the text width (30px on each side)
-      // @ts-expect-error
+      // @ts-expect-error: assigning string to number for test purposes
       const textWidth = textRef.current.scrollWidth + 30;
       setWidth(textWidth);
     }
