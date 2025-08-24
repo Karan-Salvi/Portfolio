@@ -13,7 +13,7 @@ import {
 
 const page = () => {
   return (
-    <section className="w-full min-h-screen mt-20 px-16 sm:px-5 md:px-0">
+    <section className="w-full min-h-screen mt-20 px-16 sm:px-5 md:px-0 relative">
       <h1 className="text-4xl font-bold mb-8 p-2">Projects</h1>
       <Projects items={items} />
     </section>

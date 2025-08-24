@@ -87,7 +87,7 @@ function Contact() {
       });
   };
   return (
-    <div className="shadow-input mx-auto w-full max-w-3xl rounded-none  px-4 md:rounded-2xl md:pt-8 ">
+    <div className="shadow-input mx-auto w-full max-w-3xl rounded-none  px-4 md:rounded-2xl md:pt-8 relative">
       <h1 className="text-xl sm:text-2xl md:text-4xl font-bold text-center">
         Contact Me
       </h1>

@@ -3,7 +3,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <section className="w-full min-h-screen mt-18 md:mt-24 p-2">
+    <section className="w-full min-h-screen mt-18 md:mt-24 p-2 relative">
       <h1 className="text-3xl font-bold">About Me</h1>
       <p className="text-zinc-400 text-sm mt-6 max-w-md">
         Hi, I&apos;m{" "}

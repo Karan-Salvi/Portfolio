@@ -21,7 +21,7 @@ const BlogsPage = async () => {
 
   
   return (
-    <div className="mt-20 px-6 md:px-20 lg:px-0">
+    <div className="mt-20 px-6 md:px-20 lg:px-0 relative">
       <h1 className="text-3xl font-bold">All Blogs</h1>
       <p className="text-zinc-400 text-sm mt-6 mb-6">
         I have been Programming since 3-4 years now. Throughout these years. I

@@ -4,6 +4,7 @@ import { BackgroundLines } from "@/components/ui/background-lines";
 import Image from "next/image";
 import { ContainerTextFlip } from "./ui/container-text-flip";
 
+
 const Hero = () => {
   const words = [
     "Software Engineer",
@@ -13,7 +14,7 @@ const Hero = () => {
   ];
 
   return (
-    <BackgroundLines className="max-w-screen min-h-screen flex items-center justify-center w-full flex-col px-4 gap-10 max-h-screen">
+    <BackgroundLines className="max-w-screen min-h-screen flex items-center justify-center w-full flex-col px-4 gap-10 max-h-screen relative">
       <Image
         width={128}
         height={128}

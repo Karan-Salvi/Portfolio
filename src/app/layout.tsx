@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavbarMain from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { GridBackground } from "@/components/ui/GridBackGround";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,11 +31,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased scrollbar-hidden`}
       >
-        <main className="max-w-4xl mx-auto">
-          <NavbarMain />
-          {children}
-          <Footer />
-        </main>
+        <GridBackground>
+          <main className="max-w-4xl mx-auto z-0">
+            <NavbarMain />
+            {children}
+            <Footer />
+          </main>
+        </GridBackground>
       </body>
     </html>
   );

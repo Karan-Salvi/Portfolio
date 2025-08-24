@@ -1,5 +1,4 @@
 import React from "react";
-import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { SiMongodb } from "react-icons/si";
 import { IoLogoNodejs } from "react-icons/io5";
 import { FaBootstrap } from "react-icons/fa";
@@ -23,7 +22,7 @@ import { DiRedis } from "react-icons/di";
 
 const page = () => {
   return (
-    <BackgroundBeamsWithCollision className="flex flex-col min-h-screen items-center">
+    <div className="w-full mt-24 px-16 sm:px-5 md:px-0 relative">
       <h1 className="text-2xl font-bold text-start">Frontend Skills </h1>
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-8 gap-4 mt-4 items-center justify-items-center">
         {frontend.map((skill, index) => (
@@ -40,7 +39,6 @@ const page = () => {
           </div>
         ))}
       </div>
-
       <h1 className="mt-16 text-2xl font-bold text-start">Backend Skills </h1>
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-8 gap-4 mt-4 items-center justify-items-center">
         {backend.map((skill, index) => (
@@ -57,7 +55,6 @@ const page = () => {
           </div>
         ))}
       </div>
-
       <h1 className="mt-16 text-2xl font-bold text-start">Other Skills </h1>
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-8 gap-4 mt-4 items-center justify-items-center">
         {others.map((skill, index) => (
@@ -74,7 +71,7 @@ const page = () => {
           </div>
         ))}
       </div>
-    </BackgroundBeamsWithCollision>
+    </div>
   );
 };
 
