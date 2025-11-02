@@ -97,7 +97,7 @@ export const BentoGridItem = ({
           {tech.map((a, idx) => (
             <p
               key={idx}
-              className="text-[9px] font-bold text-neutral-600 dark:text-neutral-400 border-[1px] px-2  rounded-2xl"
+              className="inline-flex items-center rounded-sm border font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-neutral-800 text-neutral-foreground hover:bg-neutral-800/80 px-1 py-0 text-[10px]"
             >
               {a}
             </p>
