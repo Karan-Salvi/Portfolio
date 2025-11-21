@@ -31,13 +31,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased scrollbar-hidden`}
       >
-        <GridBackground>
-          <main className="max-w-4xl mx-auto z-0">
-            <NavbarMain />
-            {children}
-            <Footer />
-          </main>
-        </GridBackground>
+        <main className="max-w-4xl mx-auto z-0">
+          <NavbarMain />
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );
