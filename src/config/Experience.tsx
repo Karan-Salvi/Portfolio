@@ -1,6 +1,4 @@
 import AWS from "@/components/technologies/AWS";
-import BootStrap from "@/components/technologies/BootStrap";
-import Bun from "@/components/technologies/Bun";
 import CSS from "@/components/technologies/CSS";
 import Docker from "@/components/technologies/Docker";
 import ExpressJs from "@/components/technologies/ExpressJs";
@@ -9,7 +7,6 @@ import Html from "@/components/technologies/Html";
 import JavaScript from "@/components/technologies/JavaScript";
 import MongoDB from "@/components/technologies/MongoDB";
 import Motion from "@/components/technologies/Motion";
-import NestJs from "@/components/technologies/NestJs";
 import NextJs from "@/components/technologies/NextJs";
 import NodeJs from "@/components/technologies/NodeJs";
 import Ollama from "@/components/technologies/Ollama";
@@ -75,6 +72,16 @@ export const experiences: Experience[] = [
         name: "Tailwind CSS",
         href: "https://tailwindcss.com/",
         icon: <TailwindCss />,
+      },
+      {
+        name: "Html",
+        href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+        icon: <Html />,
+      },
+      {
+        name: "JavaScript",
+        href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        icon: <JavaScript />,
       },
       {
         name: "Express",
@@ -173,6 +180,16 @@ export const experiences: Experience[] = [
         icon: <NextJs />,
       },
       {
+        name: "Html",
+        href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+        icon: <Html />,
+      },
+      {
+        name: "CSS",
+        href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+        icon: <CSS />,
+      },
+      {
         name: "Tailwind CSS",
         href: "https://tailwindcss.com/",
         icon: <TailwindCss />,
@@ -221,6 +238,16 @@ export const experiences: Experience[] = [
         name: "Redux",
         href: "https://redux.js.org/",
         icon: <Redux />,
+      },
+      {
+        name: "PostgreSQL",
+        href: "https://www.postgresql.org/",
+        icon: <PostgreSQL />,
+      },
+      {
+        name: "Prisma",
+        href: "https://www.prisma.io/",
+        icon: <Prisma />,
       },
     ],
     website: "https://www.neuxaglobal.com",

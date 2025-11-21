@@ -7,6 +7,7 @@ export default function Redux({ className }: { className?: string }) {
       width="16"
       height="16"
       viewBox="0 0 256 256"
+      className={className}
     >
       <g fill="none">
         <rect width="256" height="256" fill="#764ABC" rx="60" />

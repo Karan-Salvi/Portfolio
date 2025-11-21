@@ -7,6 +7,7 @@ export default function Redis({ className }: { className?: string }) {
       width="18"
       height="18"
       viewBox="0 0 256 220"
+      className={className}
     >
       <path
         fill="#912626"

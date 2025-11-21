@@ -7,6 +7,7 @@ export default function Zod({ className }: { className?: string }) {
       width="16"
       height="16"
       viewBox="0 0 256 203"
+      className={className}
     >
       <defs>
         <filter

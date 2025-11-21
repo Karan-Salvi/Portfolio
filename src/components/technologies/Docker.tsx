@@ -7,6 +7,8 @@ export default function Docker({ className }: { className?: string }) {
       width="16"
       height="16"
       viewBox="0 0 256 256"
+      className={className}
+      fill="currentColor"
     >
       <g fill="none">
         <rect width="256" height="256" fill="#2396ED" rx="60" />
