@@ -74,9 +74,9 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getSingleBlog } from "@/utils/mdx";
-import Image from "next/image";
-import { stringToDate } from "@/utils/date";
-import { FaArrowLeft } from "react-icons/fa6";
+// import Image from "next/image";
+// import { stringToDate } from "@/utils/date";
+// import { FaArrowLeft } from "react-icons/fa6";
 import Link from "next/link";
 import FontSizeControls from "@/common/FontSizeControls";
 import Container from "@/common/Container";
