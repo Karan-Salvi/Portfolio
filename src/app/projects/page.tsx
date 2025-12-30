@@ -13,8 +13,8 @@ import {
 
 const page = () => {
   return (
-    <section className="w-full min-h-screen mt-20 px-16 sm:px-5 md:px-0 relative">
-      <h1 className="text-4xl font-bold mb-8 p-2">Projects</h1>
+    <section className="max-w-2xl mx-auto  min-h-screen mt-20 px-16 sm:px-5 md:px-0 relative">
+      <h1 className="text-4xl font-bold mb-8 p-2 text-center">Projects</h1>
       <Projects items={items} />
     </section>
   );
@@ -41,7 +41,7 @@ const items: {
   {
     title: "CartLoop",
     description: "Multi-vendor e-commerce platform with advanced features.",
-    header: "/images/cartloopHome.png",
+    header: "/images/cartloop.png",
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
     live: "https://cartloop.vercel.app",
     github: "https://github.com/Karan-Salvi/Eccomerce-Web-Application",
@@ -60,7 +60,7 @@ const items: {
     title: "UpNetic",
     description:
       "Build your professional network with live chat, dynamic feeds, and seamless connections.",
-    header: "/images/upneticHome.png",
+    header: "/images/upnetic.png",
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
     live: "https://upnetic.vercel.app",
     github: "https://github.com/Karan-Salvi/UpNetic",
@@ -78,7 +78,7 @@ const items: {
     title: "SerenoSphere",
     description:
       "Discover, create, and manage yoga, meditation, and mindfulness sessions all in one seamless platform.",
-    header: "/images/serenosphereHome.png",
+    header: "/images/serenosphere.png",
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
     live: "https://serenosphere.vercel.app",
     github: "https://github.com/Karan-Salvi/SerenoSphere",
@@ -89,7 +89,7 @@ const items: {
     title: "FlowLane",
     description:
       "Organize projects effortlessly with a sleek, drag-and-drop Kanban board built for speed and clarity.",
-    header: "/images/flowlaneHome.png",
+    header: "/images/flowlane.png",
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
     live: "https://flowlane.vercel.app",
     github: "https://github.com/Karan-Salvi/FlowLane---Kanban-Dashboard",
@@ -98,7 +98,7 @@ const items: {
   {
     title: "FoodSwift",
     description: "A food delivery app with a focus on speed and convenience.",
-    header: "/images/fooswiftHome.png",
+    header: "/images/fooswift.png",
     icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
     live: "https://foodswift-web.vercel.app",
     github: "https://github.com/Karan-Salvi/FoodSwift",
@@ -108,7 +108,7 @@ const items: {
   {
     title: "WorkWave",
     description: "Platform for freshers to connect and apply for companies.",
-    header: "/images/workwaveHome.png",
+    header: "/images/workwave.png",
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
     live: "https://workwave-ten.vercel.app/",
     github: "https://github.com/Karan-Salvi/WorkWave",
@@ -126,7 +126,7 @@ const items: {
   {
     title: "MentorFlux",
     description: "A platform connecting students with mentors for guidance.",
-    header: "/images/mentorfluxHome.png",
+    header: "/images/mentorflux.png",
     icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
     github: "https://github.com/Karan-Salvi/MentorFlux",
     tech: [
@@ -142,7 +142,7 @@ const items: {
   {
     title: "FarmCraft",
     description: "Multi agent based farmer assistant for crop management.",
-    header: "/images/farmHome.png",
+    header: "/images/farm.png",
     icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
     github: "https://github.com/Karan-Salvi/Wadians-FarmCraft",
     tech: ["Fast API", "LangChain", "Python", "AI agent", "Ollama", "React.js"],
@@ -150,7 +150,7 @@ const items: {
   {
     title: "Yatra Cabs",
     description: "Frontend for a cab booking service.",
-    header: "/images/yatraHome.png",
+    header: "/images/yatra.png",
     icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
     github: "https://github.com/Karan-Salvi/YatraaCabs",
     tech: ["Next.js", "CSS"],
@@ -159,7 +159,7 @@ const items: {
     title: "Notepal",
     description:
       "A note-taking app with a focus on simplicity and organization.",
-    header: "/images/notepalHome.png",
+    header: "/images/notepal.png",
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
     github: "https://github.com/Karan-Salvi/Notepal-App",
     tech: ["React.js", "Node.js", "MongoDB", "Express"],
@@ -167,7 +167,7 @@ const items: {
   {
     title: "StudySync",
     description: "Frontend for a collaborative study platform for learners.",
-    header: "/images/studysyncHome.png",
+    header: "/images/studysync.png",
     icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
     github: "https://github.com/Karan-Salvi/Web-Study",
     tech: ["HTML5", "CSS3", "JavaScript"],

@@ -4,29 +4,27 @@ description: "Everything you need to know about React.js — from components and
 date: "2025-06-06"
 author: "Karan Salvi"
 image: "/images/react-cover.jpg"
+tags: ["frontend", "development", "design"]
+isPublished: true
 ---
 
 # Mastering React.js: A Developer's Guide
 
 React.js is a powerful JavaScript library developed by Facebook for building interactive user interfaces efficiently. It's widely used for single-page applications, mobile apps (via React Native), and modern web development workflows.
 
----
-
-## 🚀 What is React?
+## What is React?
 
 React is a declarative, component-based library that makes it easy to build complex UIs from small and isolated pieces of code called “components.”
 
 ### Key Features of React:
 
-- 🧩 Component-Based Architecture
-- ⚛️ Virtual DOM for faster rendering
-- 🔁 Unidirectional Data Flow
-- 🪝 Built-in Hooks for state and lifecycle
-- 🔧 Seamless integration with other libraries
+- Component-Based Architecture
+- Virtual DOM for faster rendering
+- Unidirectional Data Flow
+- Built-in Hooks for state and lifecycle
+- Seamless integration with other libraries
 
----
-
-## 🔧 Setting Up React
+## Setting Up React
 
 ### Using Create React App
 
@@ -45,9 +43,7 @@ npm install
 npm run dev
 ```
 
----
-
-## 🧱 React Fundamentals
+## React Fundamentals
 
 ### JSX - JavaScript XML
 
@@ -73,9 +69,7 @@ function Welcome(props) {
 const Welcome = ({ name }) => <h1>Hello, {name}</h1>;
 ```
 
----
-
-## 🪝 React Hooks
+## React Hooks
 
 ### useState
 
@@ -114,9 +108,7 @@ function Timer() {
 }
 ```
 
----
-
-## ⚙️ Props and State
+## Props and State
 
 ### Props Example:
 
@@ -136,9 +128,7 @@ function Profile({ name, age }) {
 const [theme, setTheme] = useState("light");
 ```
 
----
-
-## 🧭 Routing with React Router
+## Routing with React Router
 
 Install:
 
@@ -163,9 +153,7 @@ function App() {
 }
 ```
 
----
-
-## 💾 Fetching Data
+## Fetching Data
 
 ### Using fetch:
 
@@ -193,9 +181,7 @@ useEffect(() => {
 }, []);
 ```
 
----
-
-## 🧪 Testing React Components
+## Testing React Components
 
 ### Using Jest and React Testing Library
 
@@ -213,15 +199,9 @@ test("renders welcome message", () => {
 });
 ```
 
----
-
-## 🧠 Best Practices
+## Best Practices
 
 - Break components into smaller reusable ones
 - Keep state as close to where it's needed as possible
 - Use PropTypes or TypeScript for type checking
 - Avoid unnecessary re-renders
-
----
-
-

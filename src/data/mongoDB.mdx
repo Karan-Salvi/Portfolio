@@ -4,35 +4,31 @@ description: "A comprehensive guide to using MongoDB and Mongoose for efficient 
 date: "2025-06-06"
 author: "Karan Salvi"
 image: "/images/mongo-cover.jpg"
+tags: ["backend", "development", "database design"]
+isPublished: true
 ---
 
 # Getting Started with MongoDB and Mongoose
 
 MongoDB is a popular NoSQL database that stores data in flexible, JSON-like documents. Mongoose is an elegant MongoDB object modeling tool for Node.js.
 
----
+## Why Use MongoDB?
 
-## 🍃 Why Use MongoDB?
+- Schema-less and flexible
+- High performance and scalability
+- Easily handles large volumes of unstructured data
+- Built-in replication and sharding support
 
-- 🧾 Schema-less and flexible
-- 🚀 High performance and scalability
-- 🔄 Easily handles large volumes of unstructured data
-- 🔐 Built-in replication and sharding support
-
----
-
-## 🧰 Why Use Mongoose?
+## Why Use Mongoose?
 
 Mongoose adds structure and convenience on top of MongoDB:
 
-- ✅ Schema definitions
-- 🔒 Data validation
-- 🔁 Middleware support (pre/post hooks)
-- 🧩 Simple API for querying and updating documents
+- Schema definitions
+- Data validation
+- Middleware support (pre/post hooks)
+- Simple API for querying and updating documents
 
----
-
-## 🔧 Installing MongoDB and Mongoose
+## Installing MongoDB and Mongoose
 
 ```bash
 npm install mongoose
@@ -40,9 +36,7 @@ npm install mongoose
 
 Make sure you have MongoDB installed and running locally or use MongoDB Atlas.
 
----
-
-## 🌐 Connecting to MongoDB
+## Connecting to MongoDB
 
 ```js
 // db.js
@@ -60,9 +54,7 @@ db.once("open", () => {
 });
 ```
 
----
-
-## 🧱 Defining a Schema and Model
+## Defining a Schema and Model
 
 ```js
 // models/User.js
@@ -79,9 +71,7 @@ const User = mongoose.model("User", userSchema);
 module.exports = User;
 ```
 
----
-
-## 📦 Creating and Saving Documents
+## Creating and Saving Documents
 
 ```js
 const User = require("./models/User");
@@ -98,9 +88,7 @@ newUser
   .catch((err) => console.error(err));
 ```
 
----
-
-## 🔍 Querying Documents
+## Querying Documents
 
 ```js
 User.find().then((users) => console.log(users));
@@ -110,9 +98,7 @@ User.findOne({ email: "alice@example.com" }).then((user) => console.log(user));
 User.findById("someId").then((user) => console.log(user));
 ```
 
----
-
-## ✏️ Updating Documents
+## Updating Documents
 
 ```js
 User.updateOne({ email: "alice@example.com" }, { age: 30 }).then((result) =>
@@ -124,9 +110,7 @@ User.findByIdAndUpdate("someId", { name: "Alice Updated" }, { new: true }).then(
 );
 ```
 
----
-
-## ❌ Deleting Documents
+## Deleting Documents
 
 ```js
 User.deleteOne({ email: "alice@example.com" }).then((result) =>
@@ -136,9 +120,7 @@ User.deleteOne({ email: "alice@example.com" }).then((result) =>
 User.findByIdAndDelete("someId").then((deleted) => console.log(deleted));
 ```
 
----
-
-## ⚙️ Schema Validation and Defaults
+## Schema Validation and Defaults
 
 Mongoose allows built-in validation:
 
@@ -150,9 +132,7 @@ const productSchema = new mongoose.Schema({
 });
 ```
 
----
-
-## 🧠 Middleware (Hooks)
+## Middleware (Hooks)
 
 Pre-save hook example:
 
@@ -163,9 +143,7 @@ userSchema.pre("save", function (next) {
 });
 ```
 
----
-
-## 🔗 Relationships (References)
+## Relationships (References)
 
 ```js
 const blogPostSchema = new mongoose.Schema({
@@ -181,17 +159,13 @@ BlogPost.find()
   .then((posts) => console.log(posts));
 ```
 
----
-
-## 🛡️ Indexes and Performance
+## Indexes and Performance
 
 ```js
 userSchema.index({ email: 1 });
 ```
 
----
-
-## 🧪 Testing with MongoDB Memory Server
+## Testing with MongoDB Memory Server
 
 ```bash
 npm install --save-dev mongodb-memory-server
@@ -203,9 +177,7 @@ Use in tests:
 const { MongoMemoryServer } = require("mongodb-memory-server");
 ```
 
----
-
-## 📁 Project Structure Example
+## Project Structure Example
 
 ```
 src/
@@ -217,6 +189,3 @@ src/
 └── routes/
     └── userRoutes.js
 ```
-
----
-

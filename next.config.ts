@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  images: {
+    domains: ["cdn.dribbble.com", "i.pinimg.com", "i.postimg.cc"],
+  },
 };
 
 const withMDX = createMDX({

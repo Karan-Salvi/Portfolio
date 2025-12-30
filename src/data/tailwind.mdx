@@ -4,31 +4,29 @@ description: "A developer-friendly utility-first CSS framework for building mode
 date: "2025-06-06"
 author: "Karan Salvi"
 image: "/images/tailwind-cover.jpg"
+tags: ["frontend", "design", "utility"]
+isPublished: true
 ---
 
 # Mastering Tailwind CSS: A Comprehensive Guide
 
 Tailwind CSS is a utility-first CSS framework that allows developers to build custom UIs rapidly. Instead of writing traditional CSS styles, you use utility classes to control layout, spacing, color, typography, and more.
 
----
-
-## 📦 What is Tailwind CSS?
+## What is Tailwind CSS?
 
 Tailwind CSS is a low-level CSS framework. Unlike component-based frameworks like Bootstrap, Tailwind gives you the building blocks to create your own components.
 
 ### Benefits of Tailwind CSS
 
-- ⚡ Fast UI development
-- 🧩 Composable utilities
-- 🎨 No opinionated design system
-- 🌙 Built-in dark mode
-- 🔌 Extensible via plugins
+- Fast UI development
+- Composable utilities
+- No opinionated design system
+- Built-in dark mode
+- Extensible via plugins
 
----
+## Installing Tailwind CSS
 
-## 🔧 Installing Tailwind CSS
-
-You can install Tailwind in multiple environments. Here's how to install it in a basic project using **PostCSS**.
+You can install Tailwind in multiple environments. Here's how to install it in a basic project using PostCSS.
 
 ### Step 1: Initialize Project
 
@@ -75,9 +73,7 @@ In your `src/input.css` file:
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 ```
 
----
-
-## 🧱 Tailwind Basics
+## Tailwind Basics
 
 ### Utility Classes
 
@@ -105,9 +101,7 @@ npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 </div>
 ```
 
----
-
-## ✨ Advanced Tailwind Features
+## Advanced Tailwind Features
 
 ### Custom Themes
 
@@ -154,9 +148,7 @@ Use it:
 </article>
 ```
 
----
-
-## 🌙 Dark Mode
+## Dark Mode
 
 Enable in config:
 
@@ -178,9 +170,7 @@ Toggle class using JavaScript:
 document.documentElement.classList.toggle("dark");
 ```
 
----
-
-## 🧩 Component Composition
+## Component Composition
 
 Example card component:
 
@@ -196,9 +186,7 @@ Example card component:
 </div>
 ```
 
----
-
-## ⚙️ Integration with React
+## Integration with React
 
 ```jsx
 function Button() {
@@ -221,14 +209,8 @@ const buttonClass = `px-4 py-2 rounded ${
 }`;
 ```
 
----
+## Debugging Tips
 
-## 🔍 Debugging Tips
-
-- Use **Prettier** with Tailwind plugin
+- Use Prettier with Tailwind plugin
 - Inspect with browser dev tools
 - Tailwind IntelliSense extension in VSCode
-
----
-
-

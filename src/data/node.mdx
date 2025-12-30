@@ -4,35 +4,30 @@ description: "A developer-friendly guide to building robust server-side applicat
 date: "2025-06-06"
 author: "Karan Salvi"
 image: "/images/node-cover.jpg"
+tags: ["backend", "development"]
+isPublished: true
 ---
-
 
 
 # Getting Started with Express and Node.js
 
 Node.js is a runtime environment that lets you run JavaScript on the server side. Express is a minimal and flexible Node.js web application framework that provides a robust set of features to develop web and mobile applications.
 
----
+## Why Use Node.js?
 
-## ⚙️ Why Use Node.js?
+* Non-blocking, event-driven architecture
+* Rich ecosystem with npm
+* Single language (JavaScript) for frontend and backend
+* Real-time data handling
 
-- 🚀 Non-blocking, event-driven architecture
-- 📦 Rich ecosystem with npm
-- 💡 Single language (JavaScript) for frontend and backend
-- 🔄 Real-time data handling
+## Why Use Express?
 
----
+* Minimalist framework
+* Middleware support
+* Easy routing system
+* Great documentation and large community
 
-## 🧰 Why Use Express?
-
-- 🧱 Minimalist framework
-- 🔧 Middleware support
-- 🔄 Easy routing system
-- 📚 Great documentation and large community
-
----
-
-## 🔧 Installation
+## Installation
 
 Create a new Node.js project:
 
@@ -43,9 +38,7 @@ npm init -y
 npm install express
 ```
 
----
-
-## 🚀 Creating Your First Express Server
+## Creating Your First Express Server
 
 ```js
 // app.js
@@ -68,9 +61,7 @@ Run it:
 node app.js
 ```
 
----
-
-## 🛠️ Handling Routes
+## Handling Routes
 
 ```js
 app.get("/about", (req, res) => {
@@ -82,9 +73,7 @@ app.post("/submit", (req, res) => {
 });
 ```
 
----
-
-## 📦 Using Middleware
+## Using Middleware
 
 Middleware are functions that have access to request and response objects.
 
@@ -97,9 +86,7 @@ app.use((req, res, next) => {
 });
 ```
 
----
-
-## 📂 Serving Static Files
+## Serving Static Files
 
 ```js
 app.use(express.static("public"));
@@ -107,9 +94,7 @@ app.use(express.static("public"));
 
 Put files in the `public/` folder to serve them directly.
 
----
-
-## 🧩 Using Routers
+## Using Routers
 
 ```js
 // routes/userRoutes.js
@@ -126,9 +111,7 @@ const userRoutes = require("./routes/userRoutes");
 app.use("/users", userRoutes);
 ```
 
----
-
-## 🧪 Error Handling
+## Error Handling
 
 ```js
 app.use((err, req, res, next) => {
@@ -137,9 +120,7 @@ app.use((err, req, res, next) => {
 });
 ```
 
----
-
-## 🔐 Environment Variables
+## Environment Variables
 
 Install dotenv:
 
@@ -154,18 +135,14 @@ require("dotenv").config();
 const PORT = process.env.PORT || 3000;
 ```
 
----
-
-## 🌐 Connecting to MongoDB (Quick Example)
+## Connecting to MongoDB (Quick Example)
 
 ```js
 const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/myapp");
 ```
 
----
-
-## 📁 Suggested Project Structure
+## Suggested Project Structure
 
 ```
 my-express-app/
@@ -179,4 +156,3 @@ my-express-app/
 └── .env
 ```
 
----

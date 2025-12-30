@@ -4,34 +4,30 @@ description: "Learn how Redux Toolkit makes Redux state management easier with l
 date: "2025-06-06"
 author: "Karan Salvi"
 image: "/images/redux-cover.jpg"
+tags: ["frontend", "development", "state management"]
+isPublished: true
 ---
 
 # Redux Toolkit: Simplified State Management for React
 
 Redux Toolkit (RTK) is the official, recommended way to write Redux logic. It helps manage global state in React apps efficiently by reducing boilerplate and providing powerful abstractions.
 
----
-
-## 🚀 Why Redux Toolkit?
+## Why Redux Toolkit?
 
 Traditional Redux requires a lot of setup with action types, action creators, and reducers. RTK simplifies all of this by:
 
-- ✅ Reducing boilerplate
-- 🚀 Providing powerful APIs like `createSlice`, `configureStore`
-- 🔧 Built-in support for Redux Thunk
-- 🛠️ Immutable updates via Immer
+* Reducing boilerplate
+* Providing powerful APIs like `createSlice`, `configureStore`
+* Built-in support for Redux Thunk
+* Immutable updates via Immer
 
----
-
-## 🔧 Installation
+## Installation
 
 ```bash
 npm install @reduxjs/toolkit react-redux
 ```
 
----
-
-## 🧱 Setting Up Redux Toolkit
+## Setting Up Redux Toolkit
 
 ### 1. Create a Redux Slice
 
@@ -91,9 +87,7 @@ ReactDOM.render(
 );
 ```
 
----
-
-## 📦 Using Redux State in Components
+## Using Redux State in Components
 
 ### 1. Reading State with `useSelector`
 
@@ -123,9 +117,7 @@ function CounterButtons() {
 }
 ```
 
----
-
-## ⚙️ Async Logic with Thunks
+## Async Logic with Thunks
 
 ### 1. Create an Async Thunk
 
@@ -158,19 +150,15 @@ extraReducers: (builder) => {
 };
 ```
 
----
+## Best Practices
 
-## 🧠 Best Practices
+* Keep slices focused on a single domain (e.g., `userSlice`, `authSlice`)
+* Use Immer (built-in) for safe state mutation
+* Avoid prop drilling by lifting state to Redux when needed
+* Use `createAsyncThunk` for side effects
+* Memoize selectors if needed
 
-- Keep slices focused on a single domain (e.g., `userSlice`, `authSlice`)
-- Use Immer (built-in) for safe state mutation
-- Avoid prop drilling by lifting state to Redux when needed
-- Use `createAsyncThunk` for side effects
-- Memoize selectors if needed
-
----
-
-## 🛠️ DevTools & Middleware
+## DevTools & Middleware
 
 Redux Toolkit enables Redux DevTools automatically. You can also add middleware:
 
@@ -182,9 +170,7 @@ const store = configureStore({
 });
 ```
 
----
-
-## 📁 Folder Structure Suggestion
+## Folder Structure Suggestion
 
 ```
 src/
@@ -198,4 +184,3 @@ src/
 └── App.js
 ```
 
----

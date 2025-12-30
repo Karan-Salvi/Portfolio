@@ -10,7 +10,7 @@ export const projects = [
     description:
       "A multi-vendor e-commerce platform that allows users to create their own online stores and sell products.",
     link: "https://cartloop.vercel.app",
-    image: "/images/cartloop.png",
+    image: "/images/cartloopHome.png",
     skills: [
       "Frontend",
       "Analysis",
@@ -26,7 +26,7 @@ export const projects = [
     description:
       "An online learning platform that allows users to create and sell their own courses.",
     link: "https://skillcrest.vercel.app",
-    image: "/images/coursecraft.png",
+    image: "/images/skillcrest.png",
     skills: [
       "Frontend",
       "Backend",

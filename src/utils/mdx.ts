@@ -1,27 +1,47 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { compileMDX } from "next-mdx-remote/rsc";
+// export const getSingleBlog = async (slug: string) => {
+//   try {
+//     const SingleBlog = await fs.readFile(
+//       path.join(process.cwd(), "src/data/", `${slug}.mdx`),
+//       "utf-8"
+//     );
+
+//     if (!SingleBlog) {
+//       return null;
+//     }
+
+//     const { content, frontmatter } = await compileMDX<{
+//       title: string;
+//     }>({
+//       source: SingleBlog,
+//       options: { parseFrontmatter: true },
+//     });
+
+//     return { content, frontmatter };
+//   } catch (error) {
+//     console.error("Error reading or compiling MDX file:", error);
+//     return null;
+//   }
+// };
+
+import matter from "gray-matter";
+
 export const getSingleBlog = async (slug: string) => {
   try {
-    const SingleBlog = await fs.readFile(
+    const file = await fs.readFile(
       path.join(process.cwd(), "src/data/", `${slug}.mdx`),
       "utf-8"
     );
 
-    if (!SingleBlog) {
-      return null;
-    }
+    if (!file) return null;
 
-    const { content, frontmatter } = await compileMDX<{
-      title: string;
-    }>({
-      source: SingleBlog,
-      options: { parseFrontmatter: true },
-    });
+    const { content, data: frontmatter } = matter(file);
 
     return { content, frontmatter };
   } catch (error) {
-    console.error("Error reading or compiling MDX file:", error);
+    console.error("Error reading MDX file:", error);
     return null;
   }
 };
