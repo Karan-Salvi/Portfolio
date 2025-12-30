@@ -13,8 +13,10 @@ import {
 
 const page = () => {
   return (
-    <section className="max-w-2xl mx-auto  min-h-screen mt-20 px-16 sm:px-5 md:px-0 relative">
-      <h1 className="text-4xl font-bold mb-8 p-2 text-center">Projects</h1>
+    <section className="max-w-3xl mx-auto  min-h-screen mt-20 px-3  sm:px-5 md:px-0 relative">
+      <h1 className=" text-3xl sm:text-4xl font-bold mb-5 sm:mb-8 p-2 text-center">
+        Projects
+      </h1>
       <Projects items={items} />
     </section>
   );

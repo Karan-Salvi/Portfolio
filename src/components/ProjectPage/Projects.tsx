@@ -15,7 +15,7 @@ function Projects({
   }[];
 }) {
   return (
-    <BentoGrid className="max-w-2xl mx-auto ">
+    <BentoGrid className="w-full mx-auto sm:gap-y-20 sm:px-4">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}

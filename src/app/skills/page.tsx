@@ -22,7 +22,7 @@ import { DiRedis } from "react-icons/di";
 
 const page = () => {
   return (
-    <div className="w-full mt-24 px-16 sm:px-5 md:px-0 relative">
+    <div className="w-full mt-24 px-10 sm:px-5 md:px-0 relative">
       <h1 className="text-2xl font-bold text-start">Frontend Skills </h1>
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-8 gap-4 mt-4 items-center justify-items-center">
         {frontend.map((skill, index) => (

@@ -26,7 +26,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "mx-auto grid max-w-4xl grid-cols-1 gap-x-6 gap-y-20 md:auto-rows-[18rem] sm:grid-cols-2 md:grid-cols-2",
+        "mx-auto grid max-w-4xl grid-cols-1 gap-x-6 gap-y-6 md:auto-rows-[18rem] sm:grid-cols-2 md:grid-cols-2",
         className
       )}
     >
@@ -48,7 +48,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "group/bento h-auto min-h-[22rem] shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none cursor-pointer ",
+        "w-full group/bento h-auto min-h-[22rem] shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none cursor-pointer ",
         className
       )}
       // onClick={() => {
