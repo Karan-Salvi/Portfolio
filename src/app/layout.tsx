@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased scrollbar-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased scrollbar-hidden cascadia-code`}
       >
         <main className="max-w-4xl mx-auto z-0">
           <NavbarMain />
