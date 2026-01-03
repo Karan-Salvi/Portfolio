@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function Github({ className }: { className?: string }) {
   return (
@@ -7,7 +7,7 @@ export default function Github({ className }: { className?: string }) {
       viewBox="0 0 128 128"
       className={className}
     >
-      <g fill="#181616">
+      <g fill="#fff">
         <path
           fillRule="evenodd"
           clipRule="evenodd"

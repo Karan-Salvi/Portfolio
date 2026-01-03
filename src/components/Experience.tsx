@@ -5,6 +5,8 @@ import React from "react";
 import Container from "./common/Container";
 import SectionHeading from "./common/SectionHeading";
 import { ExperienceCard } from "./experience/ExperienceCard";
+import { Button } from "@/ui/button";
+import Link from "next/link";
 
 export default function Experience() {
   return (
@@ -15,11 +17,11 @@ export default function Experience() {
           <ExperienceCard key={experience.company} experience={experience} />
         ))}
       </div>
-      {/* <div className="mt-8 flex justify-center">
-        <Button variant="outline">
-          <Link href="/work-experience">Show all work experiences</Link>
+      <div className="mt-8 flex justify-center hover:scale-105 duration-300 hover:-translate-y-1.5">
+        <Button variant="default" size="lg" asChild>
+          <Link href="/about">Show all work experiences</Link>
         </Button>
-      </div> */}
+      </div>
     </Container>
   );
 }

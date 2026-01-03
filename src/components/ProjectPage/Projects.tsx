@@ -15,7 +15,7 @@ function Projects({
   }[];
 }) {
   return (
-    <BentoGrid className="w-full mx-auto sm:gap-y-20 sm:px-4">
+    <BentoGrid className="w-full mx-auto sm:gap-y-20 sm:px-4 md:px-0">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
@@ -32,8 +32,5 @@ function Projects({
     </BentoGrid>
   );
 }
-// const Skeleton = () => (
-//   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
-// );
 
 export default Projects;

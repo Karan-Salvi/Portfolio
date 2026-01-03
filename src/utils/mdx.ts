@@ -31,7 +31,7 @@ import matter from "gray-matter";
 export const getSingleBlog = async (slug: string) => {
   try {
     const file = await fs.readFile(
-      path.join(process.cwd(), "src/data/", `${slug}.mdx`),
+      path.join(process.cwd(), "src/data/blog", `${slug}.mdx`),
       "utf-8"
     );
 
@@ -47,7 +47,7 @@ export const getSingleBlog = async (slug: string) => {
 };
 
 export async function getBlogs() {
-  const files = await fs.readdir(path.join(process.cwd(), "src/data"));
+  const files = await fs.readdir(path.join(process.cwd(), "src/data/blog"));
 
   const allblogs = await Promise.all(
     files.map(async (file) => {
@@ -67,7 +67,7 @@ export async function getBlogs() {
 
 export const getFrontMatterBySlug = async (slug: string) => {
   const SingleBlog = await fs.readFile(
-    path.join(process.cwd(), "src/data/", `${slug}.mdx`),
+    path.join(process.cwd(), "src/data/blog", `${slug}.mdx`),
     "utf-8"
   );
 

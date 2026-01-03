@@ -16,17 +16,7 @@ export const metadata: Metadata = {
 };
 
 const BlogsPage = async () => {
-  const allblogs: {
-    author?: string;
-    date?: string;
-    description?: string;
-    image?: string;
-    title?: string;
-    slug?: string;
-    tags: string[];
-  }[] = await getBlogs();
-
-
+  const allblogs = await getBlogs();
 
   return (
     <div className="mt-20 px-6  lg:px-0 relative max-w-3xl mx-auto sm:mb-10">
@@ -42,7 +32,7 @@ const BlogsPage = async () => {
           <div
             key={idx}
             className={
-              "group/bento h-auto min-h-[24rem]  row-span-1 flex flex-col justify-between pb-2 rounded-xl border border-neutral-200   transition duration-200 hover:shadow-xl  dark:bg-black dark:shadow-none cursor-pointer overflow-hidden w-full dark:border-gray-800 bg-card text-card-foreground shadow-sm"
+              "group/bento h-auto min-h-[24rem]  row-span-1 flex flex-col justify-between pb-2 rounded-xl border border-neutral-200   transition duration-200 hover:shadow-xl   dark:shadow-none cursor-pointer overflow-hidden w-full dark:border-gray-800 text-card-foreground shadow-sm dark:bg-neutral-900"
             }
           >
             <div className="relative w-full aspect-video min-h-48  overflow-hidden">
@@ -59,7 +49,7 @@ const BlogsPage = async () => {
               <div className="mt-2 mb-2 font-bold text-neutral-600 dark:text-neutral-200">
                 {item?.title}
               </div>
-              <div className="text-xs font-normal text-neutral-600 dark:text-neutral-300">
+              <div className="text-xs font-normal text-neutral-800 dark:text-neutral-300 ">
                 {item?.description}
               </div>
               <div className="flex flex-wrap gap-x-2 gap-y-2 mt-2">
@@ -80,7 +70,7 @@ const BlogsPage = async () => {
               </div>
               <div className="mt-4 flex items-center justify-between gap-2">
                 <time
-                  className="text-secondary flex items-center gap-2 text-sm"
+                  className="text-secondary flex items-center gap-2 text-xs "
                   dateTime={item?.date}
                 >
                   <Calender className="size-4" />{" "}
@@ -92,7 +82,7 @@ const BlogsPage = async () => {
                 </time>
                 <Link
                   href={`/blogs/${item?.slug}`}
-                  className="text-white/85 text-sm font-semibold flex items-center justify-end gap-2 underline-offset-4 hover:underline"
+                  className="text-white/85 text-sm font-semibold flex items-center justify-end gap-2 underline-offset-4"
                 >
                   Read More <ArrowRight className="size-4" />
                 </Link>

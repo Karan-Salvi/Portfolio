@@ -1,8 +1,9 @@
+"use client";
 import { type Experience } from "@/config/Experience";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 import Skill from "../common/Skill";
 import Github from "../svgs/Github";
@@ -10,6 +11,8 @@ import LinkedIn from "../svgs/LinkedIn";
 import Website from "../svgs/Website";
 import X from "../svgs/X";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import DropDown from "../svgs/DropDown";
+import DropUp from "../svgs/DropUp";
 
 interface ExperienceCardProps {
   experience: Experience;
@@ -20,6 +23,7 @@ const parseDescription = (text: string): string => {
 };
 
 export function ExperienceCard({ experience }: ExperienceCardProps) {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="flex flex-col gap-4">
       {/* Company Header */}
@@ -105,6 +109,18 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
                   Working
                 </div>
               )}
+              {experience.description.length > 2 && !experience.isCurrent ? (
+                <button
+                  className="text-sm text-primary-500"
+                  onClick={() => setIsOpen(!isOpen)}
+                >
+                  {isOpen ? (
+                    <DropUp className="h-8 w-8 hover:bg-neutral-800 rounded-lg hover:text-white cursor-pointer" />
+                  ) : (
+                    <DropDown className="h-8 w-8 hover:bg-neutral-800 rounded-lg hover:text-white cursor-pointer" />
+                  )}
+                </button>
+              ) : null}
             </div>
             <p>{experience.position}</p>
           </div>
@@ -119,35 +135,39 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
         </div>
       </div>
 
-      {/* Technologies */}
-      <div>
-        <h4 className="text-md mt-4 mb-2 font-semibold">Technologies</h4>
-        <div className="flex flex-wrap gap-2">
-          {experience.technologies.map((technology, techIndex: number) => (
-            <Skill
-              key={techIndex}
-              name={technology.name}
-              href={technology.href}
-            >
-              {technology.icon}
-            </Skill>
-          ))}
-        </div>
-      </div>
+      {(isOpen || experience.isCurrent) && (
+        <>
+          {/* Technologies */}
+          <div>
+            <h4 className="text-md mt-4 mb-2 font-semibold">Technologies</h4>
+            <div className="flex flex-wrap gap-2">
+              {experience.technologies.map((technology, techIndex: number) => (
+                <Skill
+                  key={techIndex}
+                  name={technology.name}
+                  href={technology.href}
+                >
+                  {technology.icon}
+                </Skill>
+              ))}
+            </div>
+          </div>
 
-      {/* Description */}
-      <div className="text-[#f5f5f5] flex flex-col">
-        {experience.description.map(
-          (description: string, descIndex: number) => (
-            <p
-              key={descIndex}
-              dangerouslySetInnerHTML={{
-                __html: `• ${parseDescription(description)}`,
-              }}
-            />
-          )
-        )}
-      </div>
+          {/* Description */}
+          <div className="text-[#f5f5f5] flex flex-col">
+            {experience.description.map(
+              (description: string, descIndex: number) => (
+                <p
+                  key={descIndex}
+                  dangerouslySetInnerHTML={{
+                    __html: `• ${parseDescription(description)}`,
+                  }}
+                />
+              )
+            )}
+          </div>
+        </>
+      )}
     </div>
   );
 }
