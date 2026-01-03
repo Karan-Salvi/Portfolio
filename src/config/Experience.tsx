@@ -1,3 +1,4 @@
+import Angular from "@/components/technologies/Angular";
 import AWS from "@/components/technologies/AWS";
 import CSS from "@/components/technologies/CSS";
 import Docker from "@/components/technologies/Docker";
@@ -7,6 +8,7 @@ import Html from "@/components/technologies/Html";
 import JavaScript from "@/components/technologies/JavaScript";
 import MongoDB from "@/components/technologies/MongoDB";
 import Motion from "@/components/technologies/Motion";
+import Mysql from "@/components/technologies/Mysql";
 import NextJs from "@/components/technologies/NextJs";
 import NodeJs from "@/components/technologies/NodeJs";
 import Ollama from "@/components/technologies/Ollama";
@@ -49,6 +51,110 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     isCurrent: true,
+    isBlur: false,
+    company: "Boostmychild Pvt. Ltd.",
+    position: "Junior Software Developer Intern",
+    location: "Pune, India (On-site)",
+    image: "/images/boostmychild.webp",
+    description: [
+      "Worked as a Full-Time Software Developer Intern contributing to web application development and maintenance.",
+      "Developed and maintained frontend components using React and Angular following established coding standards.",
+      "Assisted in backend development using Node.js, focusing on API integration and data handling.",
+      "Worked with MySQL databases and utilized Redis for caching and performance optimization use cases.",
+      "Supported application deployment workflows across development and staging environments.",
+      "Collaborated with cross-functional teams, participated in debugging, testing, and documentation while adhering to NDA guidelines.",
+    ],
+    startDate: "December 2025",
+    endDate: "June 2026",
+    technologies: [
+      {
+        name: "React",
+        href: "https://react.dev/",
+        icon: <ReactIcon />,
+      },
+      {
+        name: "Angular",
+        href: "https://angular.io/",
+        icon: <Angular size="18" />,
+      },
+      {
+        name: "Node.js",
+        href: "https://nodejs.org/",
+        icon: <NodeJs />,
+      },
+      {
+        name: "Prisma",
+        href: "https://www.prisma.io/",
+        icon: <Prisma />,
+      },
+      {
+        name: "MySQL",
+        href: "https://www.mysql.com/",
+        icon: <Mysql size="18" />,
+      },
+      {
+        name: "Redis",
+        href: "https://redis.com/",
+        icon: <Redis />,
+      },
+      // {
+      //   name: "Deployments",
+      //   href: "#",
+      //   icon: <Cloud />,
+      // },
+      {
+        name: "Tailwind CSS",
+        href: "https://tailwindcss.com/",
+        icon: <TailwindCss />,
+      },
+      {
+        name: "Html",
+        href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+        icon: <Html />,
+      },
+      {
+        name: "CSS",
+        href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+        icon: <CSS />,
+      },
+      {
+        name: "JavaScript",
+        href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        icon: <JavaScript />,
+      },
+      {
+        name: "Express",
+        href: "https://expressjs.com/",
+        icon: <ExpressJs />,
+      },
+      {
+        name: "TypeScript",
+        href: "https://typescriptlang.org/",
+        icon: <TypeScript />,
+      },
+      {
+        name: "Zod",
+        href: "https://zod.dev/",
+        icon: <Zod />,
+      },
+      {
+        name: "Redis",
+        href: "https://redis.com/",
+        icon: <Redis />,
+      },
+      {
+        name: "Docker",
+        href: "https://www.docker.com/",
+        icon: <Docker />,
+      },
+    ],
+    website: "https://www.boostmychild.com",
+    github: "#",
+    x: "#",
+    linkedin: "https://www.linkedin.com/company/boostmychild/",
+  },
+  {
+    isCurrent: false,
     isBlur: true,
     company: "Confidential Tech Startup",
     position: "Founding Full Stack Developer",

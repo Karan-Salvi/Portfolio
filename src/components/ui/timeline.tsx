@@ -1,6 +1,7 @@
 "use client";
 import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
+import SectionHeading from "../common/SectionHeading";
 
 interface TimelineEntry {
   title: string;
@@ -28,16 +29,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div className="w-full md:px-10" ref={containerRef}>
-      <div className="max-w-7xl mx-auto pt-20 px-4 md:px-8 lg:px-10 text-center">
-        <h2 className="text-lg font-bold md:text-4xl text-black dark:text-white max-w-4xl">
-          Life Changelog and Updates
-        </h2>
-        {/* <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          I am Final year Computer Engineering student.Building Scalable,attractive Web Application Which can really get the users. 
-        </p> */}
-      </div>
-
+    <div className="w-full px-4 md:px-10" ref={containerRef}>
+      <SectionHeading subHeading="Featured" heading="Journey" />
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
           <div

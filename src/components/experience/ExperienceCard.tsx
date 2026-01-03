@@ -136,7 +136,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
       </div>
 
       {(isOpen || experience.isCurrent) && (
-        <>
+        <div className="animate-in fade-in slide-in-from-top-2 duration-500">
           {/* Technologies */}
           <div>
             <h4 className="text-md mt-4 mb-2 font-semibold">Technologies</h4>
@@ -154,7 +154,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
           </div>
 
           {/* Description */}
-          <div className="text-[#f5f5f5] flex flex-col">
+          <div className="text-[#f5f5f5] flex flex-col mt-2">
             {experience.description.map(
               (description: string, descIndex: number) => (
                 <p
@@ -166,7 +166,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
               )
             )}
           </div>
-        </>
+        </div>
       )}
     </div>
   );

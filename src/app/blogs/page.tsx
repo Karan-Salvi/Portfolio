@@ -62,9 +62,9 @@ const BlogsPage = async () => {
                     {tag}
                   </Badge>
                 ))}
-                {item?.tags?.length > 2 && (
+                {(item?.tags?.length ?? 0) > 2 && (
                   <Badge variant="outline" className="text-xs">
-                    +{item?.tags?.length - 2} more
+                    +{(item?.tags?.length ?? 0) - 2} more
                   </Badge>
                 )}
               </div>
@@ -74,11 +74,12 @@ const BlogsPage = async () => {
                   dateTime={item?.date}
                 >
                   <Calender className="size-4" />{" "}
-                  {new Date(item?.date).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
+                  {item?.date &&
+                    new Date(item.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
                 </time>
                 <Link
                   href={`/blogs/${item?.slug}`}

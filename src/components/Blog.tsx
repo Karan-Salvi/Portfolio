@@ -20,7 +20,7 @@ type Blog = {
 async function Blog() {
   const allblogs = await getBlogs();
   return (
-    <div className="max-w-3xl mx-auto px-0 pt-24">
+    <div className="max-w-3xl mx-auto sm:px-0 pt-24 px-4">
       <SectionHeading subHeading="Featured" heading="Blogs" />
       <BentoGrid className="w-full mx-auto sm:gap-y-28 mt-4">
         {allblogs?.splice(0, 4)?.map((item, idx) => (
@@ -57,9 +57,9 @@ async function Blog() {
                     {tag}
                   </Badge>
                 ))}
-                {item?.tags?.length > 2 && (
+                {(item?.tags?.length ?? 0) > 2 && (
                   <Badge variant="outline" className="text-xs">
-                    +{item?.tags?.length - 2} more
+                    +{(item?.tags?.length ?? 0) - 2} more
                   </Badge>
                 )}
               </div>
@@ -69,11 +69,12 @@ async function Blog() {
                   dateTime={item?.date}
                 >
                   <Calender className="size-4" />{" "}
-                  {new Date(item?.date).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
+                  {item?.date &&
+                    new Date(item.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
                 </time>
                 <Link
                   href={`/blogs/${item?.slug}`}
@@ -86,7 +87,7 @@ async function Blog() {
           </div>
         ))}
       </BentoGrid>
-      <div className="mt-32 flex justify-center hover:scale-105 duration-300 hover:-translate-y-1.5">
+      <div className="mt-12 sm:mt-32 flex justify-center hover:scale-105 duration-300 hover:-translate-y-1.5">
         <Button variant="default" size="lg" asChild>
           <Link href="/blogs">Show all blogs</Link>
         </Button>

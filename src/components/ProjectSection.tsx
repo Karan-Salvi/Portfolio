@@ -109,7 +109,7 @@ const ProjectSection = () => {
       <SectionHeading subHeading="Featured" heading="Projects" />
       <div className="h-4"></div>
       <Projects items={items} />
-      <div className="flex justify-center items-center gap-1 hover:scale-105 duration-300 hover:-translate-y-1.5 mt-24">
+      <div className="flex justify-center items-center gap-1 hover:scale-105 duration-300 hover:-translate-y-1.5 mt-8 sm:mt-24">
         <Button variant="default" size="lg">
           <Link href="/projects">See More Projects</Link>
         </Button>

@@ -36,7 +36,7 @@ function NavbarMain() {
               variant="secondary"
               onClick={() => {
                 router.push(
-                  "https://drive.google.com/file/d/1MfQvt34HFb1M1rAEZF6VQ5V8sQ9-HkfJ/view?usp=sharing"
+                  "https://drive.google.com/file/d/1PX9Jajl1PjB98rXzI392xm5bDQb887X4/view?usp=sharing"
                 );
               }}
             >

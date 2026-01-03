@@ -28,6 +28,8 @@ import { compileMDX } from "next-mdx-remote/rsc";
 
 import matter from "gray-matter";
 
+import { BlogFrontmatter } from "@/types/blog";
+
 export const getSingleBlog = async (slug: string) => {
   try {
     const file = await fs.readFile(
@@ -80,7 +82,7 @@ export const getFrontMatterBySlug = async (slug: string) => {
   //   options: { parseFrontmatter: true },
   // });
 
-  const { frontmatter } = await compileMDX<{ title: string }>({
+  const { frontmatter } = await compileMDX<BlogFrontmatter>({
     source: SingleBlog,
     options: { parseFrontmatter: true },
   });
