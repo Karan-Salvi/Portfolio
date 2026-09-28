@@ -10,6 +10,7 @@ interface BentoGridItemType {
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
   header?: string | React.ReactNode;
+  video?: string;
   icon?: React.ReactNode;
   live?: string;
   github?: string;
@@ -40,6 +41,7 @@ export const BentoGridItem = ({
   title,
   description,
   header,
+  video,
   icon,
   live,
   github,
@@ -59,13 +61,30 @@ export const BentoGridItem = ({
       //   }
       // }}
     >
-      <div className="relative w-full aspect-video min-h-40 rounded-xl overflow-hidden">
-        <Image
-          src={header as string}
-          alt="Project Image"
-          fill
-          className="object-cover transition duration-200 group-hover/bento:scale-105"
-        />
+      <div
+        className={cn(
+          "relative w-full aspect-video rounded-xl overflow-hidden",
+          video ? "shrink-0" : "min-h-40"
+        )}
+      >
+        {video ? (
+          <video
+            src={video}
+            poster={header as string}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        ) : (
+          <Image
+            src={header as string}
+            alt="Project Image"
+            fill
+            className="object-cover transition duration-200 group-hover/bento:scale-105"
+          />
+        )}
       </div>
 
       {/* {header} */}
