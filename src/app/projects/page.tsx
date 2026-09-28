@@ -9,7 +9,6 @@ import {
   IconCode,
   IconFileBroken,
   IconSignature,
-  IconTableColumn,
 } from "@tabler/icons-react";
 
 const page = () => {

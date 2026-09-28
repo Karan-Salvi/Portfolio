@@ -30,6 +30,8 @@ export const certificates = [
   },
 ];
 
-export default {
+const achievements = {
   certificates,
 };
+
+export default achievements;

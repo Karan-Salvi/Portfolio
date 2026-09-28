@@ -24,6 +24,8 @@ export const journeyItems: JourneyItem[] = [
   },
 ];
 
-export default {
+const journey = {
   journeyItems,
 };
+
+export default journey;

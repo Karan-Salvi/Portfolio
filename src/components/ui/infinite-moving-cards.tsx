@@ -27,6 +27,7 @@ export const InfiniteMovingCards = ({
 
   useEffect(() => {
     addAnimation();
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- must run once; re-running would duplicate the cloned cards
   }, []);
   const [start, setStart] = useState(false);
   function addAnimation() {
