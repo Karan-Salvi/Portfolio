@@ -3,7 +3,14 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { VscPreview } from "react-icons/vsc";
 import { FaGithub } from "react-icons/fa6";
+import { IconMaximize } from "@tabler/icons-react";
 import Link from "next/link";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "@/ui/dialog";
 
 interface BentoGridItemType {
   className?: string;
@@ -68,15 +75,46 @@ export const BentoGridItem = ({
         )}
       >
         {video ? (
-          <video
-            src={video}
-            poster={header as string}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 h-full w-full object-cover"
-          />
+          <Dialog>
+            <DialogTrigger asChild>
+              <button
+                type="button"
+                className="group/video absolute inset-0 h-full w-full cursor-zoom-in"
+                aria-label={`Play ${typeof title === "string" ? title : "project"} preview large`}
+              >
+                <video
+                  src={video}
+                  poster={header as string}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <span className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-200 group-hover/video:bg-black/30">
+                  <IconMaximize className="size-8 text-white opacity-0 transition-opacity duration-200 group-hover/video:opacity-100" />
+                </span>
+              </button>
+            </DialogTrigger>
+            <DialogContent
+              showCloseButton
+              className="w-[92vw] max-w-3xl gap-0 overflow-hidden border-none bg-black p-0 sm:max-w-3xl"
+            >
+              <DialogTitle className="sr-only">
+                {typeof title === "string" ? title : "Project"} preview
+              </DialogTitle>
+              <video
+                src={video}
+                poster={header as string}
+                autoPlay
+                loop
+                muted
+                controls
+                playsInline
+                className="aspect-video w-full"
+              />
+            </DialogContent>
+          </Dialog>
         ) : (
           <Image
             src={header as string}
