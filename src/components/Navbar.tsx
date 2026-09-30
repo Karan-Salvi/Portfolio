@@ -35,9 +35,7 @@ function NavbarMain() {
             <NavbarButton
               variant="secondary"
               onClick={() => {
-                router.push(
-                  "https://drive.google.com/file/d/1PX9Jajl1PjB98rXzI392xm5bDQb887X4/view?usp=sharing"
-                );
+                router.push(process.env.NEXT_PUBLIC_RESUME_URL as string);
               }}
             >
               Resume
@@ -46,7 +44,7 @@ function NavbarMain() {
               variant="primary"
               onClick={() => router.push("/contact")}
             >
-              Contact Us
+              Contact Me
             </NavbarButton>
           </div>
         </NavBody>
@@ -78,9 +76,7 @@ function NavbarMain() {
             <div className="flex w-full flex-col gap-4">
               <NavbarButton
                 onClick={() => {
-                  router.push(
-                    "https://drive.google.com/file/d/1MfQvt34HFb1M1rAEZF6VQ5V8sQ9-HkfJ/view?usp=sharing"
-                  );
+                  router.push(process.env.NEXT_PUBLIC_RESUME_URL as string);
                 }}
                 variant="primary"
                 className="w-full"
@@ -94,7 +90,7 @@ function NavbarMain() {
                 variant="primary"
                 className="w-full"
               >
-                Contact Us
+                Contact Me
               </NavbarButton>
             </div>
           </MobileNavMenu>

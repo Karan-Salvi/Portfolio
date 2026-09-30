@@ -6,11 +6,16 @@
 @font-face {
   font-family: "Hanken Grotesk";
   src: url("/fonts/HankenGrotesk-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Hanken Grotesk Italic";
   src: url("/fonts/HankenGrotesk-Italic-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
 }
 
 :root {

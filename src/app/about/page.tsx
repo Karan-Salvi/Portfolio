@@ -1,148 +1,92 @@
+import Image from "next/image";
+import Link from "next/link";
+
 import AboutHistory from "@/components/AboutHistory";
-import React from "react";
+import Container from "@/components/common/Container";
+import SectionHeading from "@/components/common/SectionHeading";
+import { ExperienceList } from "@/components/experience/ExperienceList";
+import { experiences } from "@/config/Experience";
+import { Button } from "@/ui/button";
 
 const page = () => {
   return (
     <section className="w-full min-h-screen mt-18 md:mt-24 p-2 relative">
-      <h1 className="text-3xl font-bold">About Me</h1>
-      <p className="text-zinc-400 text-sm mt-6 max-w-md">
-        Hi, I&apos;m{" "}
-        <span className="font-semibold text-zinc-200">Karan Salvi</span>, a
-        passionate and dedicated Computer Engineering student in my Final year,
-        with a strong foundation in{" "}
-        <span className="font-semibold text-zinc-200">
-          Frontend Development
-        </span>{" "}
-        using <span className="font-semibold text-zinc-200">React.js</span> and
-        a growing expertise in using{" "}
-        <span className="font-semibold text-zinc-200">Backend Development</span>{" "}
-        with the <span className="font-semibold text-zinc-200">MERN stack</span>
-        . I enjoy turning complex problems into simple, beautiful, and intuitive
-        solutions.
-        <br />
-        <br />
-        {/* Over the past year, I’ve worked on several full-stack projects including
-        <span className="font-bold">
-          e-commerce platforms, job portals, and mentoring systems
-        </span>
-        . My development approach focuses on clean code, responsive design using
-        <span className="font-bold">Tailwind CSS</span>, and performance-driven
-        architecture. I’m also exploring advanced areas like
-        <span className="font-bold">WebRTC video chat apps</span>,
-        <span className="font-bold">Web3 payments</span> , and
-        <span className="font-bold">AI-based solutions</span> such as crop
-        disease detection and financial fraud analysis.
-        <br />
-        <br /> */}
-        I&apos;m continuously learning new technologies and building real-world
-        applications — whether it&apos;s experimenting with{" "}
-        <span className="font-semibold text-zinc-200">Next.js</span>,
-        fine-tuning{" "}
-        <span className="font-semibold text-zinc-200">open-source LLMs</span>.
-        Beyond coding, I believe in collaboration, adaptability, and building
-        products that create meaningful impact.
-        <br />
-        <br />
-        Let&apos;s build something amazing together !!!!
-      </p>
+      <Container className="px-2 sm:px-4">
+        <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+          <div>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+              About Me
+            </h1>
+            <p
+              className="text-zinc-400 text-base mt-6 leading-[1.7] max-w-[62ch]"
+              style={{ fontFamily: "'Hanken Grotesk', sans-serif", fontWeight: 400 }}
+            >
+              Hi, I&apos;m{" "}
+              <span className="font-semibold text-zinc-200">Karan Salvi</span>,
+              a passionate and dedicated Computer Engineering student in my
+              final year, with a strong foundation in{" "}
+              <span className="font-semibold text-zinc-200">
+                Frontend Development
+              </span>{" "}
+              using{" "}
+              <span className="font-semibold text-zinc-200">React.js</span>{" "}
+              and a growing expertise in{" "}
+              <span className="font-semibold text-zinc-200">
+                Backend Development
+              </span>{" "}
+              with the{" "}
+              <span className="font-semibold text-zinc-200">MERN stack</span>.
+              I enjoy turning complex problems into simple, beautiful, and
+              intuitive solutions.
+              <br />
+              <br />
+              I&apos;m continuously learning new technologies and building
+              real-world applications, whether it&apos;s experimenting with{" "}
+              <span className="font-semibold text-zinc-200">Next.js</span> or
+              fine-tuning{" "}
+              <span className="font-semibold text-zinc-200">
+                open-source LLMs
+              </span>
+              . Beyond coding, I believe in collaboration, adaptability, and
+              building products that create meaningful impact.
+            </p>
+            <div className="flex flex-wrap gap-3 mt-8">
+              <Button variant="default" size="lg" asChild>
+                <Link href="/contact">Contact Me</Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <Link
+                  href={process.env.NEXT_PUBLIC_RESUME_URL as string}
+                  target="_blank"
+                >
+                  Resume
+                </Link>
+              </Button>
+            </div>
+          </div>
+
+          <div className="justify-self-center md:justify-self-end">
+            <div className="relative w-56 h-56 sm:w-64 sm:h-64 rounded-2xl overflow-hidden border border-white/10 shadow-input -rotate-2">
+              <Image
+                src="/images/avatar.jpg"
+                alt="Karan Salvi"
+                fill
+                priority
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </Container>
+
       <AboutHistory />
 
-      <section className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold">Experience</h1>
-        <div className="flex justify-between items-start mt-10 w-full">
-          <div className="flex flex-col gap-1">
-            <h3 className="text-base text-zinc-300 font-bold">
-              TastEzy MarketPlace LLP
-            </h3>
-            <p className="text-zinc-400 text-sm">Full Stack Developer</p>
-          </div>
-
-          <p className="text-zinc-500 text-sm">Jan 2025 - March 2025</p>
+      <Container className="px-2 sm:px-4 mt-16 mb-16">
+        <SectionHeading subHeading="Featured" heading="Experience" />
+        <div className="mt-6">
+          <ExperienceList experiences={experiences} />
         </div>
-
-        <ul className="list-disc pl-6 text-zinc-300 text-sm mt-2 flex flex-col gap-2">
-          <li>
-            Implemented a responsive and user-friendly web application
-            leveraging React.js and Tailwind CSS, resulting in a 20% increase in
-            user engagement.
-          </li>
-          <li>
-            Collaborated with a dynamic team of 10 to design and implement a
-            robust RESTful API using Node.js and Express, ensuring seamless data
-            flow and backend efficiency.
-          </li>
-          <li>
-            Integrated JWT-based authentication to enhance security and
-            streamline user session management across the platform.
-          </li>
-          <li>
-            Actively participated in code reviews, driving improvements in code
-            quality, maintainability, and development efficiency.
-          </li>
-          <li>
-            Built a scalable full-stack application using Next.js, meeting
-            complex requirements with optimized performance.
-          </li>
-        </ul>
-      </section>
-
-      <section className="max-w-3xl mx-auto mt-16">
-        <h1 className="text-3xl font-bold">Education</h1>
-        <div className="flex flex-col gap-2">
-          <div className="flex justify-between items-start mt-6 w-full">
-            <h3 className="text-base text-zinc-300 font-bold">
-              Modern Education Society&apos;s Wadia College of Engineering, Pune
-            </h3>
-
-            <p className="text-zinc-500 text-sm">2022 - 2026</p>
-          </div>
-          <div className="flex justify-between items-start">
-            <p className="text-zinc-400 text-[12.5px] font-medium ">
-              Bachelor of Engineering (B.E) in Computer Engineering (currently
-              in Final Year)
-            </p>
-            <p className="text-zinc-300 text-sm font-semibold">CGPA: 8.64/10</p>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <div className="flex justify-between items-start mt-6 w-full">
-            <h3 className="text-base text-zinc-300 font-bold">
-              Shri Dev Gopal Krishna Junior College, Guhagar
-            </h3>
-
-            <p className="text-zinc-500 text-sm">2022 - 2026</p>
-          </div>
-          <div className="flex justify-between items-start">
-            <p className="text-zinc-400 text-[12.5px] font-medium ">
-              HSC in Science (Maharashtra State Board of Secondary and Higher
-              Secondary Education)
-            </p>
-            <p className="text-zinc-300 text-sm font-semibold">
-              Percentage: 79.83%
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <div className="flex justify-between items-start mt-6 w-full">
-            <h3 className="text-base text-zinc-300 font-bold">
-              Madhymik Vidyalaya, Adur
-            </h3>
-
-            <p className="text-zinc-500 text-sm">2022 - 2026</p>
-          </div>
-          <div className="flex justify-between items-start">
-            <p className="text-zinc-400 text-[12.5px] font-medium ">
-              SSC (Maharashtra State Board of Secondary and Higher Secondary
-              Education)
-            </p>
-            <p className="text-zinc-300 text-sm font-semibold">
-              Percentage: 92.00%
-            </p>
-          </div>
-        </div>
-      </section>
+      </Container>
     </section>
   );
 };
